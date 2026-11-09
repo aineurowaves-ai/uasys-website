@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Impressum der UAsys GmbH, Freienbach / Wilen b. Wollerau." />
-    <title>Impressum — UAsys GmbH</title>
+    <meta name="description" content="Legal notice of UASYS GmbH, Roosstrasse 53, 8832 Wollerau, Switzerland." />
+    <title>Legal notice — UASYS GmbH</title>
+    <meta name="theme-color" content="#0b0a0c" />
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,175 +14,117 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var stored = localStorage.getItem("uasys-lang");
+          var lang = q === "de" || q === "en" ? q : stored === "de" ? "de" : "en";
+          document.documentElement.lang = lang;
+        } catch (e) {
+          document.documentElement.lang = "en";
+        }
+        document.documentElement.classList.add("js");
+      })();
+    </script>
   </head>
-  <body>
+  <body data-page="legal">
+    <a class="skip" href="#top"><span class="t-en">Skip to content</span><span class="t-de">Zum Inhalt</span></a>
     <div class="grain" aria-hidden="true"></div>
-
     <header class="site-header" id="header">
-      <a class="brand" href="index.html" aria-label="UASYS home">
-        <img src="assets/logo.png" alt="UASYS" class="brand-mark" width="44" height="44" />
+      <a class="brand" href="index.html#top" aria-label="UASYS">
+        <img src="assets/logo.png" alt="" class="brand-mark" width="40" height="40" />
         <span class="brand-word">UASYS</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#scope">Scope</a>
-        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <a href="index.html#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
+        <a href="index.html#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
+        <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
       </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+      </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span>
       </button>
     </header>
-
     <div class="mobile-nav" id="mobileNav" hidden>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#scope">Scope</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
+      <a href="index.html#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
+      <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
     </div>
 
-    <main class="legal-page">
+    <main class="legal-page" id="top">
       <div class="wrap legal-wrap">
-        <p class="eyebrow">Rechtliches</p>
-        <h1>Impressum</h1>
-        <p class="legal-intro">
-          Angaben gemäss den Anforderungen an die Anbieterkennzeichnung für Unternehmen
-          mit Sitz in der Schweiz. Quellen: öffentliches Handelsregister / Zefix.
+        <p class="eyebrow"><span class="t-en">Legal</span><span class="t-de">Rechtliches</span></p>
+        <h1><span class="t-en">Legal notice</span><span class="t-de">Impressum</span></h1>
+        <p>
+          <span class="t-en">Provider identification for this website.</span>
+          <span class="t-de">Anbieterkennzeichnung für diese Website.</span>
         </p>
 
         <section class="legal-block">
-          <h2>Firmenangaben</h2>
+          <h2><span class="t-en">Company</span><span class="t-de">Unternehmen</span></h2>
           <p>
-            <strong>UAsys GmbH</strong><br />
-            c/o Axel Bott<br />
-            Fällmisstrasse 12<br />
-            8832 Wilen b. Wollerau<br />
-            Schweiz
+            <strong>UASYS GmbH</strong><br />
+            Roosstrasse 53<br />
+            8832 Wollerau<br />
+            <span class="t-en">Switzerland</span><span class="t-de">Schweiz</span>
           </p>
-          <dl class="legal-dl">
-            <div>
-              <dt>Sitz</dt>
-              <dd>Freienbach (Kanton Schwyz)</dd>
-            </div>
-            <div>
-              <dt>Rechtsform</dt>
-              <dd>Gesellschaft mit beschränkter Haftung (GmbH)</dd>
-            </div>
-            <div>
-              <dt>UID</dt>
-              <dd>CHE-283.562.733</dd>
-            </div>
-            <div>
-              <dt>CH-Nummer</dt>
-              <dd>CH-130.4.032.242-7</dd>
-            </div>
-            <div>
-              <dt>Handelsregister</dt>
-              <dd>Handelsregisteramt des Kantons Schwyz</dd>
-            </div>
-            <div>
-              <dt>Stammkapital</dt>
-              <dd>CHF 20'000.00</dd>
-            </div>
-            <div>
-              <dt>Eintragung</dt>
-              <dd>24.05.2023</dd>
-            </div>
-          </dl>
-        </section>
-
-        <section class="legal-block">
-          <h2>Vertretungsberechtigte Personen</h2>
-          <ul class="legal-list">
-            <li>
-              <strong>Oleg Rozenblat</strong> — Gesellschafter und Geschäftsführer,
-              mit Einzelunterschrift (Dortmund, DE)
-            </li>
-            <li>
-              <strong>Berhard Axel Bott</strong> (genannt Axel) — Direktor,
-              mit Einzelunterschrift (Freienbach, CH)
-            </li>
-          </ul>
+          <p>
+            <span class="t-en">Legal form: limited liability company (GmbH).</span>
+            <span class="t-de">Rechtsform: Gesellschaft mit beschränkter Haftung (GmbH).</span>
+          </p>
           <p class="legal-note">
-            Stand der Personenangaben gemäss öffentlich verfügbaren Handelsregisterdaten
-            (u. a. OnlineInfo.ch / SHAB). Massgeblich ist der aktuelle Eintrag im
-            <a href="https://www.zefix.ch" rel="noopener noreferrer" target="_blank">Zentralen Firmenindex Zefix</a>.
+            <span class="t-en">The commercial-register number and the persons authorised to sign are not printed here until UASYS has confirmed them for this notice. The street address above is the address UASYS asked to show.</span>
+            <span class="t-de">Handelsregisternummer und zeichnungsberechtigte Personen stehen hier erst, wenn UASYS sie für dieses Impressum bestätigt hat. Die Adresse oben ist die Adresse, die UASYS zur Anzeige vorgegeben hat.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2>Kontakt</h2>
+          <h2><span class="t-en">Object of the company</span><span class="t-de">Zweck der Gesellschaft</span></h2>
           <p>
-            E-Mail:
-            <a href="mailto:info@uasys.ch">info@uasys.ch</a><br />
-            Postanschrift: siehe Firmenangaben oben
+            <span class="t-en">The company purpose covers the development, maintenance and distribution of software and related services and technology, including in radio electronics, together with consulting on marketing and advertising campaigns and on sales and investment strategies. The company may establish branches and subsidiaries and acquire interests in other companies at home and abroad, and may enter into any business connected with its purpose. It may acquire, encumber, sell and administer real estate, patents and licences. It may arrange financing for its own account or for third parties and may provide guarantees and sureties.</span>
+            <span class="t-de">Die Gesellschaft bezweckt die Entwicklung, Wartung und den Vertrieb von Software und die Erbringung damit zusammenhängender Dienstleistungen und Technik einschliesslich im Bereich der Funkelektronik sowie ferner Beratung von Marketing- und Werbekampagnen und von Verkaufs- und Investitionsstrategien. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum sowie Patente und Lizenzen erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2>Zweck der Gesellschaft</h2>
+          <h2><span class="t-en">Liability</span><span class="t-de">Haftung</span></h2>
           <p>
-            Die Gesellschaft bezweckt die Entwicklung, Wartung und den Vertrieb von Software
-            und die Erbringung damit zusammenhängender Dienstleistungen und Technik
-            einschliesslich im Bereich der Funkelektronik sowie ferner Beratung von
-            Marketing- und Werbekampagnen und von Verkaufs- und Investitionsstrategien.
-            Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In-
-            und Ausland errichten und sich an anderen Unternehmen im In- und Ausland
-            beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem
-            Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland
-            Grundeigentum sowie Patente und Lizenzen erwerben, belasten, veräussern und
-            verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung
-            vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und
-            Dritte eingehen.
+            <span class="t-en">The contents of this website were prepared with care. We do not warrant that they are accurate, complete or current. Where the site links to third parties, those providers are responsible for their own content. Figures for range, power and event dates describe a working basis. They are not a promise of performance or of attendance.</span>
+            <span class="t-de">Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität übernehmen wir keine Gewähr. Bei Links auf Dritte ist der jeweilige Anbieter für seine Inhalte verantwortlich. Angaben zu Reichweite, Leistung und Veranstaltungsdaten sind eine Arbeitsgrundlage. Sie sind weder eine Performance-Zusage noch eine Zusage der Teilnahme.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2>Haftungsausschluss</h2>
+          <h2><span class="t-en">Copyright</span><span class="t-de">Urheberrecht</span></h2>
           <p>
-            Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit,
-            Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr
-            übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten
-            nach den allgemeinen Gesetzen verantwortlich. Verpflichtungen zur Entfernung
-            oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
-            bleiben hiervon unberührt.
-          </p>
-          <p>
-            Unser Angebot enthält gegebenenfalls Links zu externen Websites Dritter, auf
-            deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten
-            ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
+            <span class="t-en">Content prepared by the operator of these pages is protected by Swiss copyright. Reproduction or other use beyond that right needs the written consent of the holder.</span>
+            <span class="t-de">Inhalte, die der Betreiber dieser Seiten erstellt hat, unterliegen dem schweizerischen Urheberrecht. Vervielfältigung oder andere Nutzung ausserhalb dieses Rechts braucht die schriftliche Zustimmung der berechtigten Person.</span>
           </p>
         </section>
 
-        <section class="legal-block">
-          <h2>Urheberrecht</h2>
-          <p>
-            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
-            unterliegen dem schweizerischen Urheberrecht. Beiträge Dritter sind als solche
-            gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
-            Verwertung ausserhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
-            Zustimmung des jeweiligen Autors bzw. Erstellers.
-          </p>
-        </section>
-
-        <p class="legal-back"><a href="index.html">← Zurück zur Startseite</a></p>
+        <p class="legal-back"><a href="index.html"><span class="t-en">Back to the site</span><span class="t-de">Zurück zur Website</span></a></p>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="wrap footer-row">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="" width="36" height="36" />
-          <span>UAsys GmbH</span>
+          <img src="assets/logo.png" alt="" class="footer-mark" width="42" height="42" />
+          <p class="address">
+            <span class="t-en">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Switzerland</span>
+            <span class="t-de">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Schweiz</span>
+          </p>
         </div>
-        <p>© <span id="year"></span> UAsys GmbH. Alle Rechte vorbehalten.</p>
-        <nav class="footer-legal" aria-label="Rechtliches">
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="datenschutz.html"><span class="t-en">Privacy policy</span><span class="t-de">Datenschutz</span></a>
+          <a href="impressum.html" aria-current="page"><span class="t-en">Legal notice</span><span class="t-de">Impressum</span></a>
         </nav>
       </div>
     </footer>
-
     <script src="js/main.js"></script>
   </body>
 </html>

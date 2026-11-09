@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="UAsys GmbH — software development, radio electronics, and strategic consulting."
+      content="UASYS GmbH designs and integrates navigation, embedded electronics, inertial systems and RF communication for autonomous, unmanned and industrial platforms."
     />
-    <title>UAsys GmbH</title>
+    <title>UASYS GmbH — Engineering for autonomous systems</title>
+    <link rel="canonical" href="https://uasys.ch/" />
+    <link rel="alternate" hreflang="en" href="https://uasys.ch/" />
+    <link rel="alternate" hreflang="de" href="https://uasys.ch/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://uasys.ch/" />
+    <meta name="theme-color" content="#0b0a0c" />
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,31 +21,52 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var stored = localStorage.getItem("uasys-lang");
+          var lang = q === "de" || q === "en" ? q : stored === "de" ? "de" : "en";
+          document.documentElement.lang = lang;
+        } catch (e) {
+          document.documentElement.lang = "en";
+        }
+      })();
+    </script>
   </head>
-  <body>
+  <body data-page="index">
+    <a class="skip" href="#top"><span class="t-en">Skip to content</span><span class="t-de">Zum Inhalt</span></a>
     <div class="grain" aria-hidden="true"></div>
 
     <header class="site-header" id="header">
-      <a class="brand" href="#top" aria-label="UASYS home">
-        <img src="assets/logo.png" alt="UASYS" class="brand-mark" width="44" height="44" />
+      <a class="brand" href="index.html#top" aria-label="UASYS">
+        <img src="assets/logo.png" alt="" class="brand-mark" width="40" height="40" />
         <span class="brand-word">UASYS</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#scope">Scope</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+        <a href="#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
+        <a href="#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
+        <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
       </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+      </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span>
       </button>
     </header>
 
     <div class="mobile-nav" id="mobileNav" hidden>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#scope">Scope</a>
-      <a href="#contact">Contact</a>
+      <a href="#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
+      <a href="#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
+      <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
+      <div class="mobile-tools">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-set-lang="en">EN</button>
+          <button type="button" data-set-lang="de">DE</button>
+        </div>
+      </div>
     </div>
 
     <main id="top">
@@ -53,145 +79,341 @@
             <path d="M1200 260 H980 L920 320 H760" />
             <path d="M0 620 H160 L210 560 H390 L440 620 H640" />
             <path d="M1200 700 H900 L850 640 H700" />
+            <path d="M80 420 H260 L310 370 H480" />
+            <path d="M1120 480 H940 L890 530 H720" />
             <circle cx="420" cy="240" r="4" />
             <circle cx="760" cy="320" r="4" />
             <circle cx="440" cy="620" r="4" />
             <circle cx="700" cy="640" r="4" />
+            <circle cx="480" cy="370" r="4" />
+            <circle cx="720" cy="530" r="4" />
           </svg>
         </div>
 
         <div class="hero-inner">
           <div class="hero-mark-wrap">
-            <img
-              src="assets/logo.png"
-              alt="UASYS"
-              class="hero-mark"
-              width="420"
-              height="420"
-            />
             <div class="hero-mark-glow" aria-hidden="true"></div>
+            <img src="assets/logo.png" alt="UASYS" class="hero-mark" width="420" height="420" />
           </div>
 
           <div class="hero-copy">
-            <p class="hero-kicker">UAsys GmbH</p>
-            <h1 class="hero-title">Technology with commercial range.</h1>
+            <p class="hero-kicker">UASYS GmbH</p>
+            <h1 class="hero-title">
+              <span class="t-en">Engineering the intelligence behind autonomous systems.</span>
+              <span class="t-de">Die Intelligenz hinter autonomen Systemen.</span>
+            </h1>
             <p class="hero-lead">
-              Software development and radio electronics, paired with consulting for marketing,
-              sales and investment strategy.
+              <span class="t-en">Navigation, embedded electronics, inertial systems and RF communication — integrated as one architecture.</span>
+              <span class="t-de">Navigation, Embedded-Elektronik, inertiale Systeme und HF-Kommunikation — als eine Architektur.</span>
             </p>
+            <ul class="hero-rail">
+              <li><span class="t-en">Navigation</span><span class="t-de">Navigation</span></li>
+              <li><span class="t-en">Embedded</span><span class="t-de">Embedded</span></li>
+              <li><span class="t-en">Inertial</span><span class="t-de">Inertial</span></li>
+              <li><span class="t-en">RF link</span><span class="t-de">HF-Link</span></li>
+            </ul>
             <div class="hero-actions">
-              <a class="btn btn-blue" href="#contact">Get in touch</a>
-              <a class="btn btn-outline" href="#services">View services</a>
+              <a class="btn btn-blue" href="portal.html#request">
+                <span class="t-en">Request technical information</span>
+                <span class="t-de">Technische Infos anfragen</span>
+              </a>
+              <a class="btn btn-outline" href="#capabilities">
+                <span class="t-en">Capabilities</span>
+                <span class="t-de">Kompetenzen</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="band band-warm" id="services">
-        <div class="wrap">
-          <div class="band-head">
-            <p class="eyebrow">Services</p>
-            <h2>What we deliver</h2>
+      <section class="band band-warm" id="engineering">
+        <div class="wrap system">
+          <div>
+            <p class="eyebrow reveal"><span class="t-en">01 — Engineering</span><span class="t-de">01 — Engineering</span></p>
+            <h2 class="reveal">
+              <span class="t-en">Systems, not a box of parts.</span>
+              <span class="t-de">Systeme, keine Einzelteile.</span>
+            </h2>
+            <p class="band-lead reveal">
+              <span class="t-en">UASYS builds complete electronic architectures: hardware, embedded software, sensors and signal processing for unmanned aerial, land and maritime platforms, automotive and industrial machinery.</span>
+              <span class="t-de">UASYS baut vollständige elektronische Architekturen: Hardware, Embedded-Software, Sensoren und Signalverarbeitung für unbemannte Luft-, Land- und Seeplattformen, Automotive und industrielle Maschinen.</span>
+            </p>
+            <p class="field-label reveal" style="margin-top: 1.6rem">
+              <span class="t-en">Where it applies</span><span class="t-de">Wo es greift</span>
+            </p>
+            <ul class="fields">
+              <li class="reveal"><span class="t-en">Unmanned aerial platforms</span><span class="t-de">Unbemannte Luftplattformen</span></li>
+              <li class="reveal"><span class="t-en">Ground and maritime autonomy</span><span class="t-de">Autonome Boden- und Seeplattformen</span></li>
+              <li class="reveal"><span class="t-en">Automotive and mobility</span><span class="t-de">Automobil und Mobilität</span></li>
+              <li class="reveal"><span class="t-en">Industrial automation and robotics</span><span class="t-de">Industrieautomation und Robotik</span></li>
+            </ul>
           </div>
-          <div class="rails">
-            <article class="rail reveal">
-              <span class="rail-num">01</span>
-              <h3>Software</h3>
-              <p>
-                Development, maintenance and distribution of software products and platforms —
-                built for reliability, longevity and scale.
-              </p>
-            </article>
-            <article class="rail reveal">
-              <span class="rail-num">02</span>
-              <h3>Radio electronics</h3>
-              <p>
-                Related technology and services in radio electronics — where signal integrity,
-                hardware awareness and software meet.
-              </p>
-            </article>
-            <article class="rail reveal">
-              <span class="rail-num">03</span>
-              <h3>Consulting</h3>
-              <p>
-                Advisory for marketing and advertising campaigns, sales programs, and
-                investment strategies grounded in operational reality.
-              </p>
-            </article>
+
+          <div class="system-map reveal" aria-hidden="true">
+            <svg class="system-svg" viewBox="0 0 400 360" preserveAspectRatio="none">
+              <path d="M80 90 H200 V180 H320" />
+              <path d="M80 270 H200 V180" />
+              <path d="M320 270 H200" />
+              <circle class="hub" cx="200" cy="180" r="5" />
+            </svg>
+            <div class="system-nodes">
+              <div class="system-node">
+                <strong><span class="t-en">Navigate</span><span class="t-de">Navigation</span></strong>
+                <span>GNSS · PX4 · ArduPilot</span>
+              </div>
+              <div class="system-node">
+                <strong><span class="t-en">Sense</span><span class="t-de">Sensorik</span></strong>
+                <span>IMU · MEMS · fusion</span>
+              </div>
+              <div class="system-node">
+                <strong><span class="t-en">Communicate</span><span class="t-de">Kommunikation</span></strong>
+                <span>RF link · AES-256</span>
+              </div>
+              <div class="system-node">
+                <strong><span class="t-en">Control</span><span class="t-de">Steuerung</span></strong>
+                <span>Embedded · real-time</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="band" id="about">
-        <div class="wrap about-split">
-          <div>
-            <p class="eyebrow reveal">About</p>
-            <h2 class="reveal">Purpose with range.</h2>
-            <p class="body-copy reveal">
-              UAsys GmbH exists to develop and deliver software and technology services,
-              including in radio electronics, and to provide consulting across marketing,
-              advertising, sales and investment strategy.
-            </p>
-            <p class="body-copy muted reveal">
-              We operate with a long view: solid engineering, clear commercial advice, and the
-              corporate flexibility to grow where opportunity leads.
-            </p>
-          </div>
-          <ul class="stat-list reveal">
-            <li><strong>Focus</strong><span>Software and RF technology</span></li>
-            <li><strong>Advisory</strong><span>Marketing · Sales · Investment</span></li>
-            <li><strong>Form</strong><span>Swiss limited company (GmbH)</span></li>
-            <li><strong>Seat</strong><span>Freienbach, Switzerland</span></li>
+      <section class="quote-band">
+        <div class="wrap">
+          <blockquote class="quote reveal">
+            <span class="t-en">We do not just integrate components. We engineer intelligent systems that join navigation, sensing, communication and control.</span>
+            <span class="t-de">Wir fügen nicht nur Komponenten. Wir entwickeln intelligente Systeme, die Navigation, Sensorik, Kommunikation und Steuerung verbinden.</span>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="band" id="autonomous">
+        <div class="wrap">
+          <p class="eyebrow reveal"><span class="t-en">Integrated architectures</span><span class="t-de">Integrierte Architekturen</span></p>
+          <h2 class="reveal">
+            <span class="t-en">Autonomous control, adapted to the platform.</span>
+            <span class="t-de">Autonome Steuerung, angepasst an die Plattform.</span>
+          </h2>
+          <p class="band-lead reveal">
+            <span class="t-en">Custom control and navigation on PX4 and ArduPilot, with QGroundControl where it fits. Multiple sensors — IMU, GNSS, barometric and altitude — fused into one real-time system.</span>
+            <span class="t-de">Individuelle Steuerung und Navigation auf PX4 und ArduPilot, mit QGroundControl wo es passt. Mehrere Sensoren — IMU, GNSS, barometrisch und Höhenmessung — in einem Echtzeitsystem.</span>
+          </p>
+          <ul class="stack-tags reveal">
+            <li>PX4</li>
+            <li>ArduPilot</li>
+            <li>QGroundControl</li>
+            <li>MEMS IMU</li>
+            <li>GNSS</li>
+            <li><span class="t-en">Sensor fusion</span><span class="t-de">Sensorfusion</span></li>
+            <li><span class="t-en">Custom controllers</span><span class="t-de">Individuelle Controller</span></li>
           </ul>
         </div>
       </section>
 
-      <section class="band band-ink" id="scope">
+      <section class="band band-ink" id="capabilities">
         <div class="wrap">
           <div class="band-head">
-            <p class="eyebrow reveal">Corporate scope</p>
-            <h2 class="reveal">Built to operate broadly.</h2>
-            <p class="band-lead reveal">
-              Our corporate purpose allows us to structure growth, protect intellectual property,
-              and support related commercial activity at home and abroad.
-            </p>
+            <p class="eyebrow reveal"><span class="t-en">02 — Technologies &amp; capabilities</span><span class="t-de">02 — Technologien und Kompetenzen</span></p>
+            <h2 class="reveal">
+              <span class="t-en">Four directions. One architecture.</span>
+              <span class="t-de">Vier Richtungen. Eine Architektur.</span>
+            </h2>
           </div>
-          <div class="chip-grid">
-            <article class="chip reveal">
-              <h3>Presence</h3>
-              <p>Branches, subsidiaries and participation in companies at home and abroad.</p>
+
+          <div class="cap-grid">
+            <article class="cap reveal" id="cap-a">
+              <div class="cap-top">
+                <h3><span class="t-en">Autonomous systems &amp; navigation</span><span class="t-de">Autonome Systeme und Navigation</span></h3>
+                <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M32 14 V50 M14 32 H50" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="32" cy="32" r="4" fill="currentColor" />
+                </svg>
+              </div>
+              <p>
+                <span class="t-en">Control and navigation architectures for unmanned and industrial platforms.</span>
+                <span class="t-de">Steuerungs- und Navigationsarchitekturen für unbemannte und industrielle Plattformen.</span>
+              </p>
+              <ul>
+                <li>PX4 / ArduPilot adaptation</li>
+                <li><span class="t-en">Custom flight-controller architectures</span><span class="t-de">Individuelle Flugcontroller-Architekturen</span></li>
+                <li><span class="t-en">Sensor fusion and real-time processing</span><span class="t-de">Sensorfusion und Echtzeitverarbeitung</span></li>
+                <li><span class="t-en">GNSS and external navigation modules</span><span class="t-de">GNSS und externe Navigationsmodule</span></li>
+              </ul>
             </article>
-            <article class="chip reveal">
-              <h3>Assets and IP</h3>
-              <p>Acquire, encumber, sell and administer real estate, patents and licenses.</p>
+
+            <article class="cap reveal" id="cap-b">
+              <div class="cap-top">
+                <h3><span class="t-en">Inertial measurement &amp; sensors</span><span class="t-de">Inertiale Messtechnik und Sensorik</span></h3>
+                <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <rect x="18" y="18" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M26 32 H38 M32 26 V38" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M10 24 H18 M10 40 H18 M46 24 H54 M46 40 H54" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </div>
+              <p>
+                <span class="t-en">MEMS-based IMU architectures and high-performance sensors from established manufacturers.</span>
+                <span class="t-de">IMU-Architekturen auf MEMS-Basis und Hochleistungssensoren etablierter Hersteller.</span>
+              </p>
+              <ul>
+                <li>MEMS IMU · gyro · accelerometer</li>
+                <li><span class="t-en">Barometric and radio-altitude integration</span><span class="t-de">Barometrische und Funk-Höhenmessung</span></li>
+                <li><span class="t-en">Calibration, alignment, fusion</span><span class="t-de">Kalibrierung, Abgleich, Fusion</span></li>
+                <li><span class="t-en">Embedded data processing</span><span class="t-de">Eingebettete Datenverarbeitung</span></li>
+              </ul>
             </article>
-            <article class="chip reveal">
-              <h3>Financing</h3>
-              <p>Financing for our account or third parties, plus guarantees and sureties.</p>
+
+            <article class="cap reveal" id="cap-c">
+              <div class="cap-top">
+                <h3><span class="t-en">RF communication &amp; data link</span><span class="t-de">HF-Kommunikation und Datenlink</span></h3>
+                <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M12 40 L22 28 L32 36 L44 18 L52 24" fill="none" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="22" cy="28" r="2.5" fill="currentColor" />
+                  <circle cx="44" cy="18" r="2.5" fill="currentColor" />
+                  <path d="M18 48 H46" stroke="currentColor" stroke-width="1.5" opacity="0.5" />
+                </svg>
+              </div>
+              <p>
+                <span class="t-en">Configurable RF modules and digital links between ground station and remote platform.</span>
+                <span class="t-de">Konfigurierbare HF-Module und digitale Links zwischen Bodenstation und Plattform.</span>
+              </p>
+              <ul>
+                <li><span class="t-en">Custom RF module engineering</span><span class="t-de">Kundenspezifische HF-Module</span></li>
+                <li><span class="t-en">1 W–10 W output classes by version</span><span class="t-de">1 W–10 W Ausgangsklassen je Version</span></li>
+                <li><span class="t-en">LOS development up to ~60–70 km</span><span class="t-de">LOS-Entwicklung bis ~60–70 km</span></li>
+                <li>AES-256 · modulation · integration</li>
+              </ul>
+              <p class="cap-note">
+                <span class="t-en">Range and power depend on configuration, antennas, terrain and regulations — not guaranteed figures.</span>
+                <span class="t-de">Reichweite und Leistung hängen von Konfiguration, Antennen, Gelände und Vorschriften ab — keine Zusicherung.</span>
+              </p>
             </article>
-            <article class="chip reveal">
-              <h3>Transactions</h3>
-              <p>All transactions directly or indirectly related to the company purpose.</p>
+
+            <article class="cap reveal" id="cap-d">
+              <div class="cap-top">
+                <h3><span class="t-en">RF analysis, resilience &amp; custom electronics</span><span class="t-de">HF-Analyse, Resilienz und Elektronik</span></h3>
+                <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M16 40 C22 20, 42 20, 48 40" fill="none" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M20 40 C25 28, 39 28, 44 40" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+                  <path d="M24 44 H40" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="32" cy="24" r="2.5" fill="currentColor" />
+                </svg>
+              </div>
+              <p>
+                <span class="t-en">Spectrum monitoring, interference identification, GNSS resilience and custom PCB work.</span>
+                <span class="t-de">Spektrumsüberwachung, Störungserkennung, GNSS-Resilienz und kundenspezifische PCB-Arbeit.</span>
+              </p>
+              <ul>
+                <li><span class="t-en">Signal detection and classification</span><span class="t-de">Signalerkennung und Klassifikation</span></li>
+                <li><span class="t-en">Adaptive filtering and integrity</span><span class="t-de">Adaptive Filterung und Integrität</span></li>
+                <li><span class="t-en">Custom PCB / circuit design</span><span class="t-de">Kundenspezifisches PCB-/Schaltungsdesign</span></li>
+                <li>SMT · prototype testing</li>
+              </ul>
+              <p class="cap-note">
+                <span class="t-en">Lab analysis and resilience engineering — not a product for suppressing radio signals.</span>
+                <span class="t-de">Laboranalyse und Resilienz-Engineering — kein Produkt zur Unterdrückung von Funksignalen.</span>
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="band band-contact" id="contact">
-        <div class="wrap contact-block">
-          <p class="eyebrow reveal">Contact</p>
-          <h2 class="reveal">Let’s talk.</h2>
+      <section class="band band-warm" id="events">
+        <div class="wrap">
+          <p class="eyebrow reveal"><span class="t-en">Selected industry events 2027</span><span class="t-de">Ausgewählte Events 2027</span></p>
+          <h2 class="reveal">
+            <span class="t-en">UAE and Europe.</span>
+            <span class="t-de">VAE und Europa.</span>
+          </h2>
           <p class="band-lead reveal">
-            For partnerships, technology projects or advisory inquiries — reach out and we’ll
-            respond promptly.
+            <span class="t-en">Working list only. Listing does not mean UASYS is registered or exhibiting.</span>
+            <span class="t-de">Nur Arbeitsliste. Die Nennung bedeutet keine Anmeldung und keinen Ausstellerstatus.</span>
           </p>
-          <div class="contact-details reveal">
-            <a class="btn btn-blue" href="mailto:info@uasys.ch">info@uasys.ch</a>
-            <p class="contact-address">
-              UAsys GmbH<br />
-              c/o Axel Bott · Fällmisstrasse 12<br />
-              8832 Wilen b. Wollerau · Switzerland
+
+          <div class="timeline">
+            <article class="event reveal">
+              <h3>IDEX / NAVDEX</h3>
+              <p><span class="t-en">Abu Dhabi, UAE</span><span class="t-de">Abu Dhabi, VAE</span></p>
+              <p><span class="t-en">25–29 Jan 2027</span><span class="t-de">25.–29. Jan 2027</span></p>
+              <p class="status"><span class="t-en">Considering</span><span class="t-de">In Erwägung</span></p>
+            </article>
+            <article class="event reveal">
+              <h3>Enforce Tac</h3>
+              <p>Nürnberg</p>
+              <p><span class="t-en">1–3 Mar 2027</span><span class="t-de">1.–3. Mär 2027</span></p>
+              <p class="status"><span class="t-en">Considering</span><span class="t-de">In Erwägung</span></p>
+            </article>
+            <article class="event reveal">
+              <h3>DSEI Germany</h3>
+              <p>Hannover</p>
+              <p><span class="t-en">9–12 Mar 2027</span><span class="t-de">9.–12. Mär 2027</span></p>
+              <p class="status"><span class="t-en">Considering</span><span class="t-de">In Erwägung</span></p>
+            </article>
+            <article class="event reveal">
+              <h3>XPONENTIAL Europe</h3>
+              <p>Düsseldorf</p>
+              <p><span class="t-en">16–18 Mar 2027</span><span class="t-de">16.–18. Mär 2027</span></p>
+              <p class="status"><span class="t-en">Considering</span><span class="t-de">In Erwägung</span></p>
+            </article>
+            <article class="event reveal">
+              <h3>Paris Air Show</h3>
+              <p>Paris</p>
+              <p><span class="t-en">14–20 Jun 2027</span><span class="t-de">14.–20. Jun 2027</span></p>
+              <p class="status"><span class="t-en">Considering</span><span class="t-de">In Erwägung</span></p>
+            </article>
+            <article class="event reveal">
+              <h3>DSEI UK</h3>
+              <p>London</p>
+              <p><span class="t-en">7–10 Sep 2027</span><span class="t-de">7.–10. Sep 2027</span></p>
+              <p class="status"><span class="t-en">Considering</span><span class="t-de">In Erwägung</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="portal">
+        <div class="wrap portal-stage">
+          <div>
+            <p class="eyebrow reveal"><span class="t-en">03 — Client portal</span><span class="t-de">03 — Kundenportal</span></p>
+            <h2 class="reveal">
+              <span class="t-en">Technical information stays behind access.</span>
+              <span class="t-de">Technische Infos hinter Zugang.</span>
+            </h2>
+            <p class="band-lead reveal">
+              <span class="t-en">No public contact form. Companies register, get reviewed, then request docs and track replies inside their own account.</span>
+              <span class="t-de">Keine öffentliche Kontaktform. Unternehmen registrieren sich, werden geprüft und fragen dann Unterlagen an — im eigenen Konto.</span>
             </p>
+            <ul class="checks">
+              <li class="reveal"><span class="t-en">Request by technology or direction</span><span class="t-de">Anfrage nach Technologie oder Richtung</span></li>
+              <li class="reveal"><span class="t-en">Attach specs and project files</span><span class="t-de">Pflichtenheft und Projektdateien</span></li>
+              <li class="reveal"><span class="t-en">See only your own history</span><span class="t-de">Nur die eigene Historie sichtbar</span></li>
+            </ul>
+            <div class="portal-actions reveal">
+              <a class="btn btn-blue" href="portal.html#sign-in">
+                <span class="t-en">Client login</span><span class="t-de">Kundenlogin</span>
+              </a>
+              <a class="btn btn-outline" href="portal.html#request">
+                <span class="t-en">Request technical information</span>
+                <span class="t-de">Technische Infos anfragen</span>
+              </a>
+            </div>
+          </div>
+          <div class="portal-panel reveal">
+            <div class="lock-viz" aria-hidden="true">
+              <div class="lock-ring"></div>
+              <div class="lock-ring"></div>
+              <div class="lock-core">SECURE</div>
+            </div>
+            <p class="field-label" style="margin-top: 1.1rem">
+              <span class="t-en">Request path</span><span class="t-de">Weg der Anfrage</span>
+            </p>
+            <ol class="steps">
+              <li><span class="t-en">Received</span><span class="t-de">Eingegangen</span></li>
+              <li><span class="t-en">Review</span><span class="t-de">Prüfung</span></li>
+              <li><span class="t-en">Discussion</span><span class="t-de">Klärung</span></li>
+              <li><span class="t-en">Proposal</span><span class="t-de">Angebot</span></li>
+              <li><span class="t-en">Active</span><span class="t-de">Aktiv</span></li>
+            </ol>
           </div>
         </div>
       </section>
@@ -200,13 +422,15 @@
     <footer class="site-footer">
       <div class="wrap footer-row">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="" width="36" height="36" />
-          <span>UAsys GmbH</span>
+          <img src="assets/logo.png" alt="" class="footer-mark" width="42" height="42" />
+          <p class="address">
+            <span class="t-en">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Switzerland</span>
+            <span class="t-de">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Schweiz</span>
+          </p>
         </div>
-        <p>© <span id="year"></span> UAsys GmbH. All rights reserved.</p>
         <nav class="footer-legal" aria-label="Legal">
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
+          <a href="datenschutz.html"><span class="t-en">Privacy policy</span><span class="t-de">Datenschutz</span></a>
+          <a href="impressum.html"><span class="t-en">Legal notice</span><span class="t-de">Impressum</span></a>
         </nav>
       </div>
     </footer>

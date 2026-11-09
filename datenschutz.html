@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Datenschutzerklärung der UAsys GmbH — Informationen zur Bearbeitung von Personendaten."
+      content="How UASYS GmbH handles personal data on this website and in the client portal."
     />
-    <title>Datenschutz — UAsys GmbH</title>
+    <title>Privacy policy — UASYS GmbH</title>
+    <meta name="theme-color" content="#0b0a0c" />
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,205 +17,150 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var stored = localStorage.getItem("uasys-lang");
+          var lang = q === "de" || q === "en" ? q : stored === "de" ? "de" : "en";
+          document.documentElement.lang = lang;
+        } catch (e) {
+          document.documentElement.lang = "en";
+        }
+        document.documentElement.classList.add("js");
+      })();
+    </script>
   </head>
-  <body>
+  <body data-page="privacy">
+    <a class="skip" href="#top"><span class="t-en">Skip to content</span><span class="t-de">Zum Inhalt</span></a>
     <div class="grain" aria-hidden="true"></div>
-
     <header class="site-header" id="header">
-      <a class="brand" href="index.html" aria-label="UASYS home">
-        <img src="assets/logo.png" alt="UASYS" class="brand-mark" width="44" height="44" />
+      <a class="brand" href="index.html#top" aria-label="UASYS">
+        <img src="assets/logo.png" alt="" class="brand-mark" width="40" height="40" />
         <span class="brand-word">UASYS</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#scope">Scope</a>
-        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <a href="index.html#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
+        <a href="index.html#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
+        <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
       </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+      </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span>
       </button>
     </header>
-
     <div class="mobile-nav" id="mobileNav" hidden>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#scope">Scope</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
+      <a href="index.html#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
+      <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
     </div>
 
-    <main class="legal-page">
+    <main class="legal-page" id="top">
       <div class="wrap legal-wrap">
-        <p class="eyebrow">Rechtliches</p>
-        <h1>Datenschutzerklärung</h1>
-        <p class="legal-intro">
-          Wir nehmen den Schutz Ihrer Personendaten ernst. Diese Erklärung informiert Sie
-          darüber, wie die UAsys GmbH Personendaten im Zusammenhang mit dieser Website
-          bearbeitet. Massgebend ist insbesondere das schweizerische Datenschutzgesetz (DSG).
+        <p class="eyebrow"><span class="t-en">Legal</span><span class="t-de">Rechtliches</span></p>
+        <h1><span class="t-en">Privacy policy</span><span class="t-de">Datenschutz</span></h1>
+        <p>
+          <span class="t-en">This notice explains how UASYS GmbH handles personal data in connection with this website. The Swiss Federal Act on Data Protection (FADP) is the main reference.</span>
+          <span class="t-de">Diese Erklärung beschreibt, wie die UASYS GmbH Personendaten im Zusammenhang mit dieser Website bearbeitet. Massgebend ist insbesondere das schweizerische Datenschutzgesetz (DSG).</span>
         </p>
 
         <section class="legal-block">
-          <h2>1. Verantwortliche Stelle</h2>
+          <h2><span class="t-en">1. Controller</span><span class="t-de">1. Verantwortliche Stelle</span></h2>
           <p>
-            <strong>UAsys GmbH</strong><br />
-            c/o Axel Bott<br />
-            Fällmisstrasse 12<br />
-            8832 Wilen b. Wollerau<br />
-            Schweiz<br />
-            UID: CHE-283.562.733<br />
-            E-Mail: <a href="mailto:info@uasys.ch">info@uasys.ch</a>
+            <strong>UASYS GmbH</strong><br />
+            Roosstrasse 53<br />
+            8832 Wollerau<br />
+            <span class="t-en">Switzerland</span><span class="t-de">Schweiz</span>
+          </p>
+          <p>
+            <span class="t-en">Requests to exercise data-protection rights can be sent in writing to this address.</span>
+            <span class="t-de">Begehren zur Ausübung datenschutzrechtlicher Rechte können schriftlich an diese Adresse gerichtet werden.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2>2. Bearbeitete Daten und Zwecke</h2>
-          <p>Beim Besuch dieser Website können folgende Daten bearbeitet werden:</p>
+          <h2><span class="t-en">2. What this website processes</span><span class="t-de">2. Was diese Website bearbeitet</span></h2>
           <ul class="legal-list">
             <li>
-              <strong>Technische Zugriffsdaten</strong> — u. a. IP-Adresse, Datum und Uhrzeit
-              des Zugriffs, aufgerufene Seite, Browsertyp/-version, Betriebssystem und
-              Referrer-URL. Diese Daten dienen der Bereitstellung, Stabilität und Sicherheit
-              der Website sowie der technischen Auswertung von Störungen.
+              <span class="t-en"><strong>Technical access data.</strong> The host may process IP address, date and time, the page requested, browser and operating system. This is used to deliver the site and to keep it stable and secure.</span>
+              <span class="t-de"><strong>Technische Zugriffsdaten.</strong> Der Hoster kann IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser und Betriebssystem bearbeiten. Das dient der Bereitstellung, Stabilität und Sicherheit der Website.</span>
             </li>
             <li>
-              <strong>Kommunikationsdaten</strong> — wenn Sie uns per E-Mail kontaktieren:
-              Ihre E-Mail-Adresse, Inhalt der Nachricht sowie allfällige weitere von Ihnen
-              mitgeteilte Angaben. Wir bearbeiten diese Daten zur Bearbeitung Ihrer Anfrage
-              und zur weiteren Korrespondenz.
+              <span class="t-en"><strong>Language preference.</strong> The choice EN or DE is stored locally in the browser (local storage) so the same language can be shown on the next visit. It stays on the device.</span>
+              <span class="t-de"><strong>Spracheinstellung.</strong> Die Wahl EN oder DE wird lokal im Browser gespeichert (Local Storage), damit beim nächsten Besuch dieselbe Sprache erscheint. Sie bleibt auf dem Gerät.</span>
             </li>
           </ul>
           <p>
-            Eine automatisierte Entscheidungsfindung oder Profiling im Sinne des DSG findet
-            im Rahmen dieser Website nicht statt.
+            <span class="t-en">There is no public contact form, no map and no social plugin. The site does not use third-party analytics cookies. The company access request on the portal page is sent through Web3Forms to UASYS by email (name, company, business email, country, position and optional message). Sign-in is not connected yet and does not transmit passwords.</span>
+              <span class="t-de">Es gibt keine öffentliche Kontaktform, keine Karte und kein Social-Plugin. Die Website setzt keine Analyse-Cookies Dritter. Die Unternehmens-Zugangsanfrage auf der Portalseite wird über Web3Forms per E-Mail an UASYS gesendet (Name, Unternehmen, geschäftliche E-Mail, Land, Funktion und optionale Nachricht). Die Anmeldung ist noch nicht angebunden und übermittelt keine Passwörter.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2>3. Rechtsgrundlagen</h2>
-          <p>Die Bearbeitung erfolgt, soweit anwendbar, gestützt auf:</p>
+          <h2><span class="t-en">3. Client portal, once it is operated</span><span class="t-de">3. Kundenportal, sobald es betrieben wird</span></h2>
+          <p>
+            <span class="t-en">When the portal service is connected, UASYS will process the account data a company submits: name, company, business email, country, position or department, and a password stored only as a hash. A request may include a project description, technical requirements and files. That material is visible to the client who sent it and to authorised UASYS staff. It is not published, not indexed and not shared with other clients. Some documents are released only after a manual approval. Email verification, a review of the account and a password reset will be part of that service.</span>
+            <span class="t-de">Sobald der Portaldienst angebunden ist, bearbeitet UASYS die Kontodaten, die ein Unternehmen angibt: Name, Unternehmen, geschäftliche E-Mail, Land, Funktion oder Abteilung und ein Passwort, das nur als Hash gespeichert wird. Eine Anfrage kann eine Projektbeschreibung, technische Anforderungen und Dateien enthalten. Diese Unterlagen sieht der Kunde, der sie gesendet hat, und berechtigte Mitarbeitende von UASYS. Sie werden nicht veröffentlicht, nicht indexiert und nicht mit anderen Kunden geteilt. Einzelne Dokumente werden erst nach einer manuellen Freigabe herausgegeben. E-Mail-Bestätigung, Prüfung des Kontos und das Zurücksetzen des Passworts gehören zu diesem Dienst.</span>
+          </p>
+        </section>
+
+        <section class="legal-block">
+          <h2><span class="t-en">4. Legal bases</span><span class="t-de">4. Rechtsgrundlagen</span></h2>
           <ul class="legal-list">
-            <li>Ihre Einwilligung (soweit eingeholt);</li>
-            <li>die Erfüllung eines Vertrags oder vorvertraglicher Massnahmen;</li>
-            <li>
-              überwiegende berechtigte Interessen unsererseits (insbesondere Betrieb und
-              Sicherheit der Website, Beantwortung von Anfragen);
-            </li>
-            <li>gesetzliche Verpflichtungen.</li>
+            <li><span class="t-en">Consent, where it is asked for.</span><span class="t-de">Einwilligung, soweit sie eingeholt wird.</span></li>
+            <li><span class="t-en">Steps toward a contract, or performance of a contract.</span><span class="t-de">Vorvertragliche Schritte oder Erfüllung eines Vertrags.</span></li>
+            <li><span class="t-en">Overriding legitimate interests, in particular operating and securing the website.</span><span class="t-de">Überwiegende berechtigte Interessen, insbesondere Betrieb und Sicherheit der Website.</span></li>
+            <li><span class="t-en">Legal duties.</span><span class="t-de">Gesetzliche Pflichten.</span></li>
           </ul>
         </section>
 
         <section class="legal-block">
-          <h2>4. Cookies und ähnliche Technologien</h2>
+          <h2><span class="t-en">5. Hosting and fonts</span><span class="t-de">5. Hosting und Schriften</span></h2>
           <p>
-            Diese Website kommt grundsätzlich ohne Tracking-Cookies Dritter aus. Es können
-            technisch notwendige Speichervorgänge des Browsers (z. B. für Anzeigeeinstellungen)
-            erfolgen. Sollten wir künftig Analyse- oder Marketing-Tools einsetzen, werden wir
-            diese Erklärung entsprechend aktualisieren und — soweit erforderlich —
-            Einwilligungen einholen.
+            <span class="t-en">The site is served by a hosting provider, which may hold server logs for that purpose. Typefaces are loaded from Google Fonts. That can open a connection to Google and transmit the IP address. If the typefaces are later hosted locally, that transmission stops.</span>
+            <span class="t-de">Die Website wird bei einem Hosting-Anbieter betrieben. Dabei können Server-Logfiles anfallen. Schriftarten werden über Google Fonts geladen. Dabei kann eine Verbindung zu Google entstehen und die IP-Adresse übermittelt werden. Werden die Schriften später lokal eingebunden, entfällt diese Übermittlung.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2>5. Hosting und Auftragsbearbeiter</h2>
+          <h2><span class="t-en">6. Retention and security</span><span class="t-de">6. Speicherdauer und Sicherheit</span></h2>
           <p>
-            Die Website wird bei einem Hosting-Anbieter betrieben. Dabei können
-            Server-Logfiles und die unter Ziffer 2 genannten technischen Daten beim
-            Hosting-Partner anfallen. Die Bearbeitung erfolgt im Rahmen einer
-            Auftragsbearbeitung bzw. vergleichbarer Vereinbarungen und nur soweit für den
-            Betrieb erforderlich.
-          </p>
-          <p>
-            Externe Schriftarten können über Google Fonts geladen werden. Dabei kann eine
-            Verbindung zu Servern von Google hergestellt und Ihre IP-Adresse übermittelt
-            werden. Alternativ können Schriftarten lokal eingebunden werden; bei einer
-            lokalen Einbindung entfällt diese Übermittlung.
+            <span class="t-en">Personal data is kept only as long as the purpose or a statutory retention duty requires. Appropriate technical and organisational measures are used against loss, alteration and unauthorised access. Transmission over the internet cannot be guaranteed to be absolutely secure.</span>
+            <span class="t-de">Personendaten werden nur so lange behalten, wie es der Zweck oder eine gesetzliche Aufbewahrungspflicht verlangt. Es werden angemessene technische und organisatorische Massnahmen gegen Verlust, Veränderung und unbefugten Zugriff getroffen. Eine absolute Sicherheit der Übertragung im Internet kann nicht gewährleistet werden.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2>6. Weitergabe und Übermittlung ins Ausland</h2>
+          <h2><span class="t-en">7. Rights</span><span class="t-de">7. Rechte</span></h2>
           <p>
-            Personendaten werden nur weitergegeben, wenn dies für die genannten Zwecke
-            erforderlich ist, Sie eingewilligt haben oder eine gesetzliche Pflicht besteht.
-            Empfänger können insbesondere IT- und Hosting-Dienstleister sein.
+            <span class="t-en">Under applicable law you may request access, correction, deletion or restriction, and you may ask for a copy of your data where the law provides it. You may withdraw consent for the future and object to certain processing. You may also contact the Swiss Federal Data Protection and Information Commissioner (FDPIC).</span>
+            <span class="t-de">Nach anwendbarem Recht können Sie Auskunft, Berichtigung, Löschung oder Einschränkung verlangen und, soweit vorgesehen, eine Herausgabe Ihrer Daten. Eine Einwilligung können Sie mit Wirkung für die Zukunft widerrufen und bestimmten Bearbeitungen widersprechen. Zuständige Aufsichtsbehörde in der Schweiz ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB).</span>
           </p>
-          <p>
-            Sofern Daten in Länder ohne gleichwertiges Datenschutzniveau übermittelt werden
-            (z. B. bei Nutzung von US-Diensten), treffen wir geeignete Garantien (etwa
-            Standardvertragsklauseln) oder stützen uns auf gesetzlich vorgesehene Ausnahmen,
-            soweit anwendbar.
-          </p>
+          <p class="legal-note"><span class="t-en">Version: November 2026</span><span class="t-de">Stand: November 2026</span></p>
         </section>
 
-        <section class="legal-block">
-          <h2>7. Speicherdauer</h2>
-          <p>
-            Wir speichern Personendaten nur so lange, wie es für die jeweiligen Zwecke
-            erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
-            Server-Logfiles werden in der Regel nach kurzer Frist gelöscht oder anonymisiert,
-            sofern keine sicherheitsrelevanten Gründe eine längere Aufbewahrung erfordern.
-            E-Mail-Korrespondenz wird so lange aufbewahrt, wie dies für die Bearbeitung der
-            Anfrage und allfällige Nachweise zweckmässig ist.
-          </p>
-        </section>
-
-        <section class="legal-block">
-          <h2>8. Datensicherheit</h2>
-          <p>
-            Wir treffen angemessene technische und organisatorische Massnahmen, um
-            Personendaten gegen Verlust, Manipulation und unbefugten Zugriff zu schützen.
-            Eine absolute Sicherheit bei der Übertragung über das Internet kann jedoch nicht
-            gewährleistet werden.
-          </p>
-        </section>
-
-        <section class="legal-block">
-          <h2>9. Ihre Rechte</h2>
-          <p>Sie haben im Rahmen des anwendbaren Rechts insbesondere das Recht auf:</p>
-          <ul class="legal-list">
-            <li>Auskunft über die bearbeiteten Personendaten;</li>
-            <li>Berichtigung unrichtiger Daten;</li>
-            <li>Löschung oder Einschränkung der Bearbeitung;</li>
-            <li>Datenherausgabe / Datenübertragbarkeit, soweit vorgesehen;</li>
-            <li>Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft;</li>
-            <li>Widerspruch gegen bestimmte Bearbeitungen, soweit anwendbar.</li>
-          </ul>
-          <p>
-            Zur Ausübung Ihrer Rechte wenden Sie sich an
-            <a href="mailto:info@uasys.ch">info@uasys.ch</a>. Zudem können Sie sich bei der
-            zuständigen Aufsichtsbehörde beschweren. In der Schweiz ist dies der
-            Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB).
-          </p>
-        </section>
-
-        <section class="legal-block">
-          <h2>10. Änderungen</h2>
-          <p>
-            Wir können diese Datenschutzerklärung anpassen, wenn sich Rechtslage, unsere
-            Dienste oder die Datenbearbeitung ändern. Es gilt die jeweils auf dieser Seite
-            veröffentlichte Fassung.
-          </p>
-          <p class="legal-note">Stand: September 2026</p>
-        </section>
-
-        <p class="legal-back"><a href="index.html">← Zurück zur Startseite</a></p>
+        <p class="legal-back"><a href="index.html"><span class="t-en">Back to the site</span><span class="t-de">Zurück zur Website</span></a></p>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="wrap footer-row">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="" width="36" height="36" />
-          <span>UAsys GmbH</span>
+          <img src="assets/logo.png" alt="" class="footer-mark" width="42" height="42" />
+          <p class="address">
+            <span class="t-en">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Switzerland</span>
+            <span class="t-de">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Schweiz</span>
+          </p>
         </div>
-        <p>© <span id="year"></span> UAsys GmbH. Alle Rechte vorbehalten.</p>
-        <nav class="footer-legal" aria-label="Rechtliches">
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="datenschutz.html" aria-current="page"><span class="t-en">Privacy policy</span><span class="t-de">Datenschutz</span></a>
+          <a href="impressum.html"><span class="t-en">Legal notice</span><span class="t-de">Impressum</span></a>
         </nav>
       </div>
     </footer>
-
     <script src="js/main.js"></script>
   </body>
 </html>
