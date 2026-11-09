@@ -166,6 +166,38 @@
 
   mobileNav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
 
+  document.querySelectorAll(".nav-dd").forEach((dd) => {
+    const trigger = dd.querySelector(".nav-dd-trigger");
+    if (!trigger) return;
+
+    const setOpen = (open) => {
+      dd.classList.toggle("is-open", open);
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    trigger.addEventListener("click", (e) => {
+      const href = trigger.getAttribute("href");
+      const isTouch =
+        window.matchMedia("(hover: none)").matches ||
+        window.matchMedia("(pointer: coarse)").matches;
+      if (isTouch || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if (dd.classList.contains("is-open") && href) return;
+      e.preventDefault();
+      setOpen(!dd.classList.contains("is-open"));
+    });
+
+    dd.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        trigger.focus();
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dd.contains(e.target)) setOpen(false);
+    });
+  });
+
   const reveals = document.querySelectorAll(".reveal");
   reveals.forEach((el) => {
     const siblings = [...(el.parentElement?.children || [])].filter((c) =>
