@@ -12,6 +12,24 @@
     <link rel="alternate" hreflang="en" href="https://uasys.ch/" />
     <link rel="alternate" hreflang="de" href="https://uasys.ch/?lang=de" />
     <link rel="alternate" hreflang="x-default" href="https://uasys.ch/" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="UASYS GmbH" />
+    <meta property="og:url" content="https://uasys.ch/" />
+    <meta property="og:title" content="UASYS GmbH — Engineering for autonomous systems" />
+    <meta
+      property="og:description"
+      content="Navigation, embedded electronics, inertial systems and RF communication for autonomous, unmanned and industrial platforms."
+    />
+    <meta property="og:image" content="https://uasys.ch/assets/logo.png" />
+    <meta property="og:locale" content="en_CH" />
+    <meta property="og:locale:alternate" content="de_CH" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="UASYS GmbH — Engineering for autonomous systems" />
+    <meta
+      name="twitter:description"
+      content="Navigation, embedded electronics, inertial systems and RF communication for autonomous platforms."
+    />
     <meta name="theme-color" content="#0b0a0c" />
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +39,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "UASYS GmbH",
+        "url": "https://uasys.ch/",
+        "logo": "https://uasys.ch/assets/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Roosstrasse 53",
+          "postalCode": "8832",
+          "addressLocality": "Wollerau",
+          "addressCountry": "CH"
+        },
+        "areaServed": "Worldwide",
+        "description": "Engineering company for autonomous systems, navigation, inertial sensors and RF communication."
+      }
+    </script>
     <script>
       (function () {
         try {
@@ -46,7 +82,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
         <a href="#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
-        <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
+        <a href="#contact"><span class="t-en">Contact</span><span class="t-de">Kontakt</span></a>
       </nav>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-set-lang="en">EN</button>
@@ -60,7 +96,7 @@
     <div class="mobile-nav" id="mobileNav" hidden>
       <a href="#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
       <a href="#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
-      <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
+      <a href="#contact"><span class="t-en">Contact</span><span class="t-de">Kontakt</span></a>
       <div class="mobile-tools">
         <div class="lang" role="group" aria-label="Language">
           <button type="button" data-set-lang="en">EN</button>
@@ -113,7 +149,7 @@
               <li><span class="t-en">RF link</span><span class="t-de">HF-Link</span></li>
             </ul>
             <div class="hero-actions">
-              <a class="btn btn-blue" href="portal.html#request">
+              <a class="btn btn-blue" href="#contact">
                 <span class="t-en">Request technical information</span>
                 <span class="t-de">Technische Infos anfragen</span>
               </a>
@@ -221,7 +257,7 @@
           </div>
 
           <div class="cap-grid">
-            <article class="cap reveal" id="cap-a">
+            <a class="cap reveal" id="cap-a" href="autonomous-systems.html">
               <div class="cap-top">
                 <h3><span class="t-en">Autonomous systems &amp; navigation</span><span class="t-de">Autonome Systeme und Navigation</span></h3>
                 <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
@@ -240,9 +276,10 @@
                 <li><span class="t-en">Sensor fusion and real-time processing</span><span class="t-de">Sensorfusion und Echtzeitverarbeitung</span></li>
                 <li><span class="t-en">GNSS and external navigation modules</span><span class="t-de">GNSS und externe Navigationsmodule</span></li>
               </ul>
-            </article>
+              <p class="cap-more"><span class="t-en">Open page →</span><span class="t-de">Seite öffnen →</span></p>
+            </a>
 
-            <article class="cap reveal" id="cap-b">
+            <a class="cap reveal" id="cap-b" href="inertial-sensors.html">
               <div class="cap-top">
                 <h3><span class="t-en">Inertial measurement &amp; sensors</span><span class="t-de">Inertiale Messtechnik und Sensorik</span></h3>
                 <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
@@ -261,9 +298,10 @@
                 <li><span class="t-en">Calibration, alignment, fusion</span><span class="t-de">Kalibrierung, Abgleich, Fusion</span></li>
                 <li><span class="t-en">Embedded data processing</span><span class="t-de">Eingebettete Datenverarbeitung</span></li>
               </ul>
-            </article>
+              <p class="cap-more"><span class="t-en">Open page →</span><span class="t-de">Seite öffnen →</span></p>
+            </a>
 
-            <article class="cap reveal" id="cap-c">
+            <a class="cap reveal" id="cap-c" href="rf-communication.html">
               <div class="cap-top">
                 <h3><span class="t-en">RF communication &amp; data link</span><span class="t-de">HF-Kommunikation und Datenlink</span></h3>
                 <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
@@ -287,9 +325,10 @@
                 <span class="t-en">Range and power depend on configuration, antennas, terrain and regulations — not guaranteed figures.</span>
                 <span class="t-de">Reichweite und Leistung hängen von Konfiguration, Antennen, Gelände und Vorschriften ab — keine Zusicherung.</span>
               </p>
-            </article>
+              <p class="cap-more"><span class="t-en">Open page →</span><span class="t-de">Seite öffnen →</span></p>
+            </a>
 
-            <article class="cap reveal" id="cap-d">
+            <a class="cap reveal" id="cap-d" href="rf-electronics.html">
               <div class="cap-top">
                 <h3><span class="t-en">RF analysis, resilience &amp; custom electronics</span><span class="t-de">HF-Analyse, Resilienz und Elektronik</span></h3>
                 <svg class="cap-icon" viewBox="0 0 64 64" aria-hidden="true">
@@ -313,7 +352,8 @@
                 <span class="t-en">Lab analysis and resilience engineering — not a product for suppressing radio signals.</span>
                 <span class="t-de">Laboranalyse und Resilienz-Engineering — kein Produkt zur Unterdrückung von Funksignalen.</span>
               </p>
-            </article>
+              <p class="cap-more"><span class="t-en">Open page →</span><span class="t-de">Seite öffnen →</span></p>
+            </a>
           </div>
         </div>
       </section>
@@ -371,49 +411,70 @@
         </div>
       </section>
 
-      <section class="band" id="portal">
-        <div class="wrap portal-stage">
+      <section class="band" id="contact">
+        <div class="wrap contact-stage">
           <div>
-            <p class="eyebrow reveal"><span class="t-en">03 — Client portal</span><span class="t-de">03 — Kundenportal</span></p>
+            <p class="eyebrow reveal"><span class="t-en">Contact</span><span class="t-de">Kontakt</span></p>
             <h2 class="reveal">
-              <span class="t-en">Technical information stays behind access.</span>
-              <span class="t-de">Technische Infos hinter Zugang.</span>
+              <span class="t-en">Request technical information.</span>
+              <span class="t-de">Technische Informationen anfragen.</span>
             </h2>
             <p class="band-lead reveal">
-              <span class="t-en">No public contact form. Companies register, get reviewed, then request docs and track replies inside their own account.</span>
-              <span class="t-de">Keine öffentliche Kontaktform. Unternehmen registrieren sich, werden geprüft und fragen dann Unterlagen an — im eigenen Konto.</span>
+              <span class="t-en">Tell us about your company and the technology you need. The request goes to UASYS by email — no account, no login.</span>
+              <span class="t-de">Beschreiben Sie Ihr Unternehmen und die benötigte Technologie. Die Anfrage geht per E-Mail an UASYS — ohne Konto und ohne Login.</span>
             </p>
-            <ul class="checks">
-              <li class="reveal"><span class="t-en">Request by technology or direction</span><span class="t-de">Anfrage nach Technologie oder Richtung</span></li>
-              <li class="reveal"><span class="t-en">Attach specs and project files</span><span class="t-de">Pflichtenheft und Projektdateien</span></li>
-              <li class="reveal"><span class="t-en">See only your own history</span><span class="t-de">Nur die eigene Historie sichtbar</span></li>
-            </ul>
-            <div class="portal-actions reveal">
-              <a class="btn btn-blue" href="portal.html#sign-in">
-                <span class="t-en">Client login</span><span class="t-de">Kundenlogin</span>
-              </a>
-              <a class="btn btn-outline" href="portal.html#request">
-                <span class="t-en">Request technical information</span>
-                <span class="t-de">Technische Infos anfragen</span>
-              </a>
-            </div>
+            <p class="address reveal" style="margin-top: 1.4rem">
+              <span class="t-en">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Switzerland</span>
+              <span class="t-de">UASYS GmbH<br />Roosstrasse 53<br />8832 Wollerau<br />Schweiz</span>
+            </p>
           </div>
-          <div class="portal-panel reveal">
-            <div class="lock-viz" aria-hidden="true">
-              <div class="lock-ring"></div>
-              <div class="lock-ring"></div>
-              <div class="lock-core">SECURE</div>
-            </div>
-            <p class="field-label" style="margin-top: 1.1rem">
-              <span class="t-en">Request path</span><span class="t-de">Weg der Anfrage</span>
+          <div class="panel reveal">
+            <form class="form" id="requestForm">
+              <input type="hidden" name="access_key" value="c1e16505-6526-44c1-8a24-5aee114bb3ed" />
+              <input type="hidden" name="subject" value="UASYS — technical information request" />
+              <input type="hidden" name="from_name" value="UASYS website" />
+              <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
+              <label>
+                <span class="t-en">Full name</span><span class="t-de">Vollständiger Name</span>
+                <input name="name" autocomplete="name" required data-ph-en="Full name" data-ph-de="Vollständiger Name" />
+              </label>
+              <label>
+                <span class="t-en">Email</span><span class="t-de">E-Mail</span>
+                <input name="email" type="email" autocomplete="email" required data-ph-en="name@company.com" data-ph-de="name@firma.com" />
+              </label>
+              <label>
+                <span class="t-en">Phone</span><span class="t-de">Telefon</span>
+                <input name="phone" type="tel" autocomplete="tel" required data-ph-en="+41 …" data-ph-de="+41 …" />
+              </label>
+              <label>
+                <span class="t-en">Message</span><span class="t-de">Nachricht</span>
+                <input name="message" required data-ph-en="Technology or project of interest" data-ph-de="Technologie oder Projekt von Interesse" />
+              </label>
+              <label>
+                <span class="t-en">Company (optional)</span><span class="t-de">Unternehmen (optional)</span>
+                <input name="company" autocomplete="organization" data-ph-en="Company name" data-ph-de="Unternehmen" />
+              </label>
+              <label>
+                <span class="t-en">Country (optional)</span><span class="t-de">Land (optional)</span>
+                <input name="country" autocomplete="country-name" data-ph-en="Country" data-ph-de="Land" />
+              </label>
+              <label>
+                <span class="t-en">Position / department (optional)</span><span class="t-de">Funktion / Abteilung (optional)</span>
+                <input name="position" autocomplete="organization-title" data-ph-en="Position or department" data-ph-de="Funktion oder Abteilung" />
+              </label>
+              <button class="btn btn-blue" type="submit" id="requestSubmit">
+                <span class="t-en">Send request</span>
+                <span class="t-de">Anfrage senden</span>
+              </button>
+            </form>
+            <p class="form-error" id="requestError" hidden>
+              <span class="t-en">The request could not be sent. Please try again in a moment.</span>
+              <span class="t-de">Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es gleich noch einmal.</span>
             </p>
-            <ol class="steps">
-              <li><span class="t-en">Received</span><span class="t-de">Eingegangen</span></li>
-              <li><span class="t-en">Review</span><span class="t-de">Prüfung</span></li>
-              <li><span class="t-en">Discussion</span><span class="t-de">Klärung</span></li>
-              <li><span class="t-en">Proposal</span><span class="t-de">Angebot</span></li>
-              <li><span class="t-en">Active</span><span class="t-de">Aktiv</span></li>
-            </ol>
+            <p class="form-done" id="requestDone" hidden>
+              <span class="t-en">Request sent. UASYS will reply to the email you entered.</span>
+              <span class="t-de">Anfrage gesendet. UASYS antwortet an die angegebene E-Mail.</span>
+            </p>
           </div>
         </div>
       </section>

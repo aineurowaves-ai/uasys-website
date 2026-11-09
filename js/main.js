@@ -11,18 +11,33 @@
         description:
           "UASYS GmbH designs and integrates navigation, embedded electronics, inertial systems and RF communication for autonomous, unmanned and industrial platforms.",
       },
-      portal: {
-        title: "Client portal — UASYS GmbH",
-        description:
-          "Company registration and client sign-in for technical information from UASYS GmbH. Requests are available after authorisation.",
-      },
       legal: {
         title: "Legal notice — UASYS GmbH",
         description: "Legal notice of UASYS GmbH, Roosstrasse 53, 8832 Wollerau, Switzerland.",
       },
       privacy: {
-        title: "Privacy policy — UASYS GmbH",
-        description: "How UASYS GmbH handles personal data on this website and in the client portal.",
+        title: "Datenschutz — UASYS GmbH",
+        description: "How UASYS GmbH handles personal data on this website.",
+      },
+      "service-auto": {
+        title: "Autonomous systems & navigation — UASYS GmbH",
+        description:
+          "UASYS develops autonomous control and navigation architectures on PX4 and ArduPilot, with sensor fusion, GNSS and embedded integration.",
+      },
+      "service-imu": {
+        title: "Inertial measurement & sensors — UASYS GmbH",
+        description:
+          "UASYS develops MEMS IMU architectures, calibration and sensor fusion for inertial navigation and positioning.",
+      },
+      "service-rf": {
+        title: "RF communication & data link — UASYS GmbH",
+        description:
+          "Configurable RF modules and digital data links between ground stations and remote platforms.",
+      },
+      "service-elec": {
+        title: "RF analysis, resilience & custom electronics — UASYS GmbH",
+        description:
+          "RF spectrum monitoring, GNSS resilience and custom PCB electronics by UASYS GmbH.",
       },
     },
     de: {
@@ -31,19 +46,33 @@
         description:
           "UASYS GmbH entwickelt und integriert Navigation, Embedded-Elektronik, inertiale Systeme und HF-Kommunikation für autonome, unbemannte und industrielle Plattformen.",
       },
-      portal: {
-        title: "Kundenportal — UASYS GmbH",
-        description:
-          "Registrierung für Unternehmen und Kundenlogin für technische Informationen der UASYS GmbH. Anfragen sind nach der Freigabe möglich.",
-      },
       legal: {
         title: "Impressum — UASYS GmbH",
         description: "Impressum der UASYS GmbH, Roosstrasse 53, 8832 Wollerau, Schweiz.",
       },
       privacy: {
         title: "Datenschutz — UASYS GmbH",
+        description: "Wie die UASYS GmbH Personendaten auf dieser Website bearbeitet.",
+      },
+      "service-auto": {
+        title: "Autonome Systeme und Navigation — UASYS GmbH",
         description:
-          "Wie die UASYS GmbH Personendaten auf dieser Website und im Kundenportal bearbeitet.",
+          "UASYS entwickelt Architekturen für autonome Steuerung und Navigation auf PX4 und ArduPilot mit Sensorfusion und GNSS.",
+      },
+      "service-imu": {
+        title: "Inertiale Messtechnik und Sensorik — UASYS GmbH",
+        description:
+          "UASYS entwickelt IMU-Architekturen auf MEMS-Basis, Kalibrierung und Sensorfusion für inertiale Navigation.",
+      },
+      "service-rf": {
+        title: "HF-Kommunikation und Datenlink — UASYS GmbH",
+        description:
+          "Konfigurierbare HF-Module und digitale Datenlinks zwischen Bodenstation und entfernter Plattform.",
+      },
+      "service-elec": {
+        title: "HF-Analyse, Resilienz und Elektronik — UASYS GmbH",
+        description:
+          "HF-Spektrumsüberwachung, GNSS-Resilienz und kundenspezifische PCB-Elektronik der UASYS GmbH.",
       },
     },
   };
@@ -81,6 +110,10 @@
     document.title = copy.title;
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute("content", copy.description);
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", copy.title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", copy.description);
 
     document.querySelectorAll("a[href]").forEach((a) => {
       if (!a.dataset.href) a.dataset.href = a.getAttribute("href");
@@ -159,31 +192,20 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  const bindPreview = (formId, doneId) => {
-    const form = document.getElementById(formId);
-    const done = document.getElementById(doneId);
-    form?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-      form.hidden = true;
-      if (done) done.hidden = false;
-    });
-  };
+  const requestForm = document.getElementById("requestForm");
+  const requestDone = document.getElementById("requestDone");
+  const requestError = document.getElementById("requestError");
+  const requestSubmit = document.getElementById("requestSubmit");
 
-  const registerForm = document.getElementById("registerForm");
-  const registerDone = document.getElementById("registerDone");
-  const registerError = document.getElementById("registerError");
-  const registerSubmit = document.getElementById("registerSubmit");
-
-  registerForm?.addEventListener("submit", async (event) => {
+  requestForm?.addEventListener("submit", async (event) => {
     event.preventDefault();
-    if (!registerForm.reportValidity()) return;
-    if (registerError) registerError.hidden = true;
-    if (registerSubmit) registerSubmit.disabled = true;
+    if (!requestForm.reportValidity()) return;
+    if (requestError) requestError.hidden = true;
+    if (requestSubmit) requestSubmit.disabled = true;
 
     try {
-      const payload = new FormData(registerForm);
-      payload.set("subject", "UASYS — company access request");
+      const payload = new FormData(requestForm);
+      payload.set("subject", "UASYS — technical information request");
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: payload,
@@ -192,13 +214,11 @@
       if (!response.ok || result.success === false) {
         throw new Error(result.message || "submit failed");
       }
-      registerForm.hidden = true;
-      if (registerDone) registerDone.hidden = false;
+      requestForm.hidden = true;
+      if (requestDone) requestDone.hidden = false;
     } catch {
-      if (registerError) registerError.hidden = false;
-      if (registerSubmit) registerSubmit.disabled = false;
+      if (requestError) requestError.hidden = false;
+      if (requestSubmit) requestSubmit.disabled = false;
     }
   });
-
-  bindPreview("loginForm", "loginDone");
 })();

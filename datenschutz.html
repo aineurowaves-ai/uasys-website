@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="How UASYS GmbH handles personal data on this website and in the client portal."
-    />
-    <title>Privacy policy — UASYS GmbH</title>
+    <meta name="description" content="Datenschutz / Privacy policy of UASYS GmbH — contact form via Web3Forms, data kept by UASYS." />
+    <title>Datenschutz — UASYS GmbH</title>
+    <link rel="canonical" href="https://uasys.ch/datenschutz.html" />
+    <link rel="alternate" hreflang="en" href="https://uasys.ch/datenschutz.html" />
+    <link rel="alternate" hreflang="de" href="https://uasys.ch/datenschutz.html?lang=de" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uasys.ch/datenschutz.html" />
+    <meta property="og:title" content="Datenschutz — UASYS GmbH" />
+    <meta property="og:description" content="How UASYS GmbH handles personal data on this website." />
+    <meta property="og:image" content="https://uasys.ch/assets/logo.png" />
+    <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#0b0a0c" />
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,12 +28,10 @@
         try {
           var q = new URLSearchParams(location.search).get("lang");
           var stored = localStorage.getItem("uasys-lang");
-          var lang = q === "de" || q === "en" ? q : stored === "de" ? "de" : "en";
-          document.documentElement.lang = lang;
+          document.documentElement.lang = q === "de" || q === "en" ? q : stored === "de" ? "de" : "en";
         } catch (e) {
           document.documentElement.lang = "en";
         }
-        document.documentElement.classList.add("js");
       })();
     </script>
   </head>
@@ -42,7 +46,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="index.html#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
         <a href="index.html#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
-        <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
+        <a href="index.html#contact"><span class="t-en">Contact</span><span class="t-de">Kontakt</span></a>
       </nav>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-set-lang="en">EN</button>
@@ -55,7 +59,7 @@
     <div class="mobile-nav" id="mobileNav" hidden>
       <a href="index.html#engineering"><span class="t-en">Engineering</span><span class="t-de">Engineering</span></a>
       <a href="index.html#capabilities"><span class="t-en">Capabilities</span><span class="t-de">Kompetenzen</span></a>
-      <a href="portal.html"><span class="t-en">Client Portal</span><span class="t-de">Kundenportal</span></a>
+      <a href="index.html#contact"><span class="t-en">Contact</span><span class="t-de">Kontakt</span></a>
     </div>
 
     <main class="legal-page" id="top">
@@ -76,68 +80,65 @@
             <span class="t-en">Switzerland</span><span class="t-de">Schweiz</span>
           </p>
           <p>
-            <span class="t-en">Requests to exercise data-protection rights can be sent in writing to this address.</span>
-            <span class="t-de">Begehren zur Ausübung datenschutzrechtlicher Rechte können schriftlich an diese Adresse gerichtet werden.</span>
+            <span class="t-en">Requests to exercise data-protection rights can be sent to the contact form on this website or in writing to the address above.</span>
+            <span class="t-de">Begehren zur Ausübung datenschutzrechtlicher Rechte können über das Kontaktformular auf dieser Website oder schriftlich an die Adresse oben gerichtet werden.</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2><span class="t-en">2. What this website processes</span><span class="t-de">2. Was diese Website bearbeitet</span></h2>
-          <ul class="legal-list">
-            <li>
-              <span class="t-en"><strong>Technical access data.</strong> The host may process IP address, date and time, the page requested, browser and operating system. This is used to deliver the site and to keep it stable and secure.</span>
-              <span class="t-de"><strong>Technische Zugriffsdaten.</strong> Der Hoster kann IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser und Betriebssystem bearbeiten. Das dient der Bereitstellung, Stabilität und Sicherheit der Website.</span>
-            </li>
-            <li>
-              <span class="t-en"><strong>Language preference.</strong> The choice EN or DE is stored locally in the browser (local storage) so the same language can be shown on the next visit. It stays on the device.</span>
-              <span class="t-de"><strong>Spracheinstellung.</strong> Die Wahl EN oder DE wird lokal im Browser gespeichert (Local Storage), damit beim nächsten Besuch dieselbe Sprache erscheint. Sie bleibt auf dem Gerät.</span>
-            </li>
-          </ul>
+          <h2><span class="t-en">2. Technical access data</span><span class="t-de">2. Technische Zugriffsdaten</span></h2>
           <p>
-            <span class="t-en">There is no public contact form, no map and no social plugin. The site does not use third-party analytics cookies. The company access request on the portal page is sent through Web3Forms to UASYS by email (name, company, business email, country, position and optional message). Sign-in is not connected yet and does not transmit passwords.</span>
-              <span class="t-de">Es gibt keine öffentliche Kontaktform, keine Karte und kein Social-Plugin. Die Website setzt keine Analyse-Cookies Dritter. Die Unternehmens-Zugangsanfrage auf der Portalseite wird über Web3Forms per E-Mail an UASYS gesendet (Name, Unternehmen, geschäftliche E-Mail, Land, Funktion und optionale Nachricht). Die Anmeldung ist noch nicht angebunden und übermittelt keine Passwörter.</span>
+            <span class="t-en">When you visit the site, the host may process IP address, date and time, the page requested, browser and operating system. This is used to deliver the site and keep it stable and secure. Language preference (EN/DE) is stored only in your browser (local storage).</span>
+            <span class="t-de">Beim Besuch der Website kann der Hoster IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser und Betriebssystem bearbeiten. Das dient der Bereitstellung, Stabilität und Sicherheit. Die Spracheinstellung (EN/DE) wird nur im Browser gespeichert (Local Storage).</span>
           </p>
         </section>
 
         <section class="legal-block">
-          <h2><span class="t-en">3. Client portal, once it is operated</span><span class="t-de">3. Kundenportal, sobald es betrieben wird</span></h2>
+          <h2><span class="t-en">3. Contact form (Web3Forms)</span><span class="t-de">3. Kontaktformular (Web3Forms)</span></h2>
           <p>
-            <span class="t-en">When the portal service is connected, UASYS will process the account data a company submits: name, company, business email, country, position or department, and a password stored only as a hash. A request may include a project description, technical requirements and files. That material is visible to the client who sent it and to authorised UASYS staff. It is not published, not indexed and not shared with other clients. Some documents are released only after a manual approval. Email verification, a review of the account and a password reset will be part of that service.</span>
-            <span class="t-de">Sobald der Portaldienst angebunden ist, bearbeitet UASYS die Kontodaten, die ein Unternehmen angibt: Name, Unternehmen, geschäftliche E-Mail, Land, Funktion oder Abteilung und ein Passwort, das nur als Hash gespeichert wird. Eine Anfrage kann eine Projektbeschreibung, technische Anforderungen und Dateien enthalten. Diese Unterlagen sieht der Kunde, der sie gesendet hat, und berechtigte Mitarbeitende von UASYS. Sie werden nicht veröffentlicht, nicht indexiert und nicht mit anderen Kunden geteilt. Einzelne Dokumente werden erst nach einer manuellen Freigabe herausgegeben. E-Mail-Bestätigung, Prüfung des Kontos und das Zurücksetzen des Passworts gehören zu diesem Dienst.</span>
+            <span class="t-en">The contact form on this website is delivered through <strong>Web3Forms</strong>. Required fields are name, email, phone and message; company, country and position are optional.</span>
+            <span class="t-de">Das Kontaktformular auf dieser Website wird über <strong>Web3Forms</strong> übermittelt. Pflichtfelder sind Name, E-Mail, Telefon und Nachricht; Unternehmen, Land und Funktion sind optional.</span>
+          </p>
+          <p>
+            <span class="t-en">Web3Forms is used only as a transmission service so the request reaches UASYS by email. Contact data from the form are <strong>not sold, not shared for marketing and not passed on to other companies</strong>. UASYS keeps them <strong>exclusively for handling the enquiry</strong> (reply, follow-up, internal documentation of the request).</span>
+            <span class="t-de">Web3Forms dient nur als Übermittlungsdienst, damit die Anfrage UASYS per E-Mail erreicht. Kontaktdaten aus dem Formular werden <strong>nicht verkauft, nicht für Marketing weitergegeben und nicht an andere Unternehmen weitergeleitet</strong>. UASYS bewahrt sie <strong>ausschliesslich zur Bearbeitung der Anfrage</strong> auf (Antwort, Nachfolge, interne Dokumentation der Anfrage).</span>
+          </p>
+          <p>
+            <span class="t-en">No user accounts are created on this website. No passwords are collected or stored.</span>
+            <span class="t-de">Auf dieser Website werden keine Benutzerkonten angelegt. Es werden keine Passwörter erhoben oder gespeichert.</span>
           </p>
         </section>
 
         <section class="legal-block">
           <h2><span class="t-en">4. Legal bases</span><span class="t-de">4. Rechtsgrundlagen</span></h2>
           <ul class="legal-list">
-            <li><span class="t-en">Consent, where it is asked for.</span><span class="t-de">Einwilligung, soweit sie eingeholt wird.</span></li>
-            <li><span class="t-en">Steps toward a contract, or performance of a contract.</span><span class="t-de">Vorvertragliche Schritte oder Erfüllung eines Vertrags.</span></li>
+            <li><span class="t-en">Steps toward a contract or answering an enquiry you initiated.</span><span class="t-de">Vorvertragliche Schritte bzw. Beantwortung einer von Ihnen ausgelösten Anfrage.</span></li>
             <li><span class="t-en">Overriding legitimate interests, in particular operating and securing the website.</span><span class="t-de">Überwiegende berechtigte Interessen, insbesondere Betrieb und Sicherheit der Website.</span></li>
-            <li><span class="t-en">Legal duties.</span><span class="t-de">Gesetzliche Pflichten.</span></li>
+            <li><span class="t-en">Legal duties, where applicable.</span><span class="t-de">Gesetzliche Pflichten, soweit anwendbar.</span></li>
           </ul>
         </section>
 
         <section class="legal-block">
           <h2><span class="t-en">5. Hosting and fonts</span><span class="t-de">5. Hosting und Schriften</span></h2>
           <p>
-            <span class="t-en">The site is served by a hosting provider, which may hold server logs for that purpose. Typefaces are loaded from Google Fonts. That can open a connection to Google and transmit the IP address. If the typefaces are later hosted locally, that transmission stops.</span>
-            <span class="t-de">Die Website wird bei einem Hosting-Anbieter betrieben. Dabei können Server-Logfiles anfallen. Schriftarten werden über Google Fonts geladen. Dabei kann eine Verbindung zu Google entstehen und die IP-Adresse übermittelt werden. Werden die Schriften später lokal eingebunden, entfällt diese Übermittlung.</span>
+            <span class="t-en">The site is served by a hosting provider, which may hold server logs for that purpose. Typefaces are loaded from Google Fonts; that can open a connection to Google and transmit the IP address.</span>
+            <span class="t-de">Die Website wird bei einem Hosting-Anbieter betrieben. Dabei können Server-Logfiles anfallen. Schriftarten werden über Google Fonts geladen; dabei kann eine Verbindung zu Google entstehen und die IP-Adresse übermittelt werden.</span>
           </p>
         </section>
 
         <section class="legal-block">
           <h2><span class="t-en">6. Retention and security</span><span class="t-de">6. Speicherdauer und Sicherheit</span></h2>
           <p>
-            <span class="t-en">Personal data is kept only as long as the purpose or a statutory retention duty requires. Appropriate technical and organisational measures are used against loss, alteration and unauthorised access. Transmission over the internet cannot be guaranteed to be absolutely secure.</span>
-            <span class="t-de">Personendaten werden nur so lange behalten, wie es der Zweck oder eine gesetzliche Aufbewahrungspflicht verlangt. Es werden angemessene technische und organisatorische Massnahmen gegen Verlust, Veränderung und unbefugten Zugriff getroffen. Eine absolute Sicherheit der Übertragung im Internet kann nicht gewährleistet werden.</span>
+            <span class="t-en">Enquiry data are kept only as long as needed to handle the request or as required by law. Appropriate measures are used against loss and unauthorised access. Transmission over the internet cannot be guaranteed to be absolutely secure.</span>
+            <span class="t-de">Anfragedaten werden nur so lange behalten, wie es für die Bearbeitung nötig ist oder gesetzlich verlangt wird. Es werden angemessene Massnahmen gegen Verlust und unbefugten Zugriff getroffen. Eine absolute Sicherheit der Übertragung im Internet kann nicht gewährleistet werden.</span>
           </p>
         </section>
 
         <section class="legal-block">
           <h2><span class="t-en">7. Rights</span><span class="t-de">7. Rechte</span></h2>
           <p>
-            <span class="t-en">Under applicable law you may request access, correction, deletion or restriction, and you may ask for a copy of your data where the law provides it. You may withdraw consent for the future and object to certain processing. You may also contact the Swiss Federal Data Protection and Information Commissioner (FDPIC).</span>
-            <span class="t-de">Nach anwendbarem Recht können Sie Auskunft, Berichtigung, Löschung oder Einschränkung verlangen und, soweit vorgesehen, eine Herausgabe Ihrer Daten. Eine Einwilligung können Sie mit Wirkung für die Zukunft widerrufen und bestimmten Bearbeitungen widersprechen. Zuständige Aufsichtsbehörde in der Schweiz ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB).</span>
+            <span class="t-en">Under applicable law you may request access, correction, deletion or restriction, and you may ask for a copy of your data where the law provides it. You may also contact the Swiss Federal Data Protection and Information Commissioner (FDPIC).</span>
+            <span class="t-de">Nach anwendbarem Recht können Sie Auskunft, Berichtigung, Löschung oder Einschränkung verlangen und, soweit vorgesehen, eine Herausgabe Ihrer Daten. Zuständige Aufsichtsbehörde in der Schweiz ist der EDÖB.</span>
           </p>
           <p class="legal-note"><span class="t-en">Version: November 2026</span><span class="t-de">Stand: November 2026</span></p>
         </section>
