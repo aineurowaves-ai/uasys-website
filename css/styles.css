@@ -178,7 +178,7 @@ section[id] {
 
 .nav {
   display: none;
-  gap: 1.45rem;
+  gap: 1.6rem;
   align-items: center;
 }
 
@@ -205,28 +205,11 @@ section[id] {
 .nav-dd-trigger {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
   background: none;
   border: 0;
   padding: 0;
   font: inherit;
   cursor: pointer;
-}
-
-.nav-dd-caret {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-1px) rotate(45deg);
-  opacity: 0.7;
-  transition: transform 0.2s var(--ease);
-}
-
-.nav-dd:hover .nav-dd-caret,
-.nav-dd:focus-within .nav-dd-caret,
-.nav-dd.is-open .nav-dd-caret {
-  transform: translateY(1px) rotate(225deg);
 }
 
 .nav-dd-panel {
@@ -279,10 +262,6 @@ section[id] {
 .nav-dd-panel a[aria-current="page"] {
   color: var(--text);
   background: rgba(255, 255, 255, 0.04);
-}
-
-.nav-dd-panel a span {
-  display: block;
 }
 
 .lang {
