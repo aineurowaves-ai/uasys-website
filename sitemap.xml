@@ -1,52 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://uasys.ch/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uasys.ch/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://uasys.ch/?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://uasys.ch/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://uasys.ch/autonomous-systems/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uasys.ch/autonomous-systems/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://uasys.ch/autonomous-systems/?lang=de" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://uasys.ch/inertial-sensors/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uasys.ch/inertial-sensors/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://uasys.ch/inertial-sensors/?lang=de" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://uasys.ch/rf-communication/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uasys.ch/rf-communication/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://uasys.ch/rf-communication/?lang=de" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://uasys.ch/rf-electronics/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uasys.ch/rf-electronics/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://uasys.ch/rf-electronics/?lang=de" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://uasys.ch/impressum/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uasys.ch/impressum/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://uasys.ch/impressum/?lang=de" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://uasys.ch/datenschutz/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uasys.ch/datenschutz/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://uasys.ch/datenschutz/?lang=de" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

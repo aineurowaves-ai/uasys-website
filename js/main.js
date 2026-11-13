@@ -95,21 +95,21 @@
     return path || "/";
   };
 
-  const withLang = (href, lang) => {
+  const normalizeHref = (href) => {
     if (/^(https?:|mailto:|tel:)/.test(href)) return href;
     const url = new URL(href, location.href);
     if (url.origin !== location.origin) return href;
     url.pathname = cleanPath(url.pathname);
-    if (lang === "de") url.searchParams.set("lang", "de");
-    else url.searchParams.delete("lang");
+    url.searchParams.delete("lang");
+    if (url.hash === "#top") url.hash = "";
     return url.pathname + url.search + url.hash;
   };
 
-  const syncCleanUrl = (lang) => {
+  const syncCleanUrl = () => {
     const url = new URL(location.href);
     url.pathname = cleanPath(url.pathname);
-    if (lang === "de") url.searchParams.set("lang", "de");
-    else url.searchParams.delete("lang");
+    url.searchParams.delete("lang");
+    if (url.hash === "#top") url.hash = "";
     const next = url.pathname + url.search + url.hash;
     if (next !== location.pathname + location.search + location.hash) {
       history.replaceState(null, "", next);
@@ -124,7 +124,7 @@
     } catch {
       /* ignore */
     }
-    syncCleanUrl(next);
+    syncCleanUrl();
 
     const copy = meta[next][page] || meta[next].index;
     document.title = copy.title;
@@ -137,7 +137,7 @@
 
     document.querySelectorAll("a[href]").forEach((a) => {
       if (!a.dataset.href) a.dataset.href = a.getAttribute("href");
-      a.setAttribute("href", withLang(a.dataset.href, next));
+      a.setAttribute("href", normalizeHref(a.dataset.href));
     });
 
     document.querySelectorAll("[data-ph-en]").forEach((field) => {
