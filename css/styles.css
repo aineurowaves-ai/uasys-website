@@ -1305,12 +1305,11 @@ html[lang="de"] .lang [data-set-lang="de"] {
   }
 
   .circuit-lines {
-    opacity: 0.18;
+    opacity: 0.26;
   }
 
   .circuit-lines path {
     animation: none;
-    stroke-dasharray: none;
   }
 
   .hero-inner {
