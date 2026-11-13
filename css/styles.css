@@ -498,22 +498,22 @@ html[lang="de"] .lang [data-set-lang="de"] {
 
 .hero-frame-rail-tl {
   top: calc(9% + 0.35rem);
-  left: calc(4% + 5.2rem);
+  left: calc(4% + 6.05rem);
 }
 
 .hero-frame-rail-tr {
   top: calc(9% + 0.35rem);
-  right: calc(4% + 5.2rem);
+  right: calc(4% + 6.05rem);
 }
 
 .hero-frame-rail-bl {
   bottom: calc(9% + 0.35rem);
-  left: calc(4% + 5.2rem);
+  left: calc(4% + 6.05rem);
 }
 
 .hero-frame-rail-br {
   bottom: calc(9% + 0.35rem);
-  right: calc(4% + 5.2rem);
+  right: calc(4% + 6.05rem);
 }
 
 .hero-frame-dot {
@@ -526,22 +526,22 @@ html[lang="de"] .lang [data-set-lang="de"] {
 
 .hero-frame-dot-tl {
   top: calc(9% + 0.1rem);
-  left: calc(4% + 5rem);
+  left: calc(4% + 5.85rem);
 }
 
 .hero-frame-dot-tr {
   top: calc(9% + 0.1rem);
-  right: calc(4% + 5rem);
+  right: calc(4% + 5.85rem);
 }
 
 .hero-frame-dot-bl {
   bottom: calc(9% + 0.1rem);
-  left: calc(4% + 5rem);
+  left: calc(4% + 5.85rem);
 }
 
 .hero-frame-dot-br {
   bottom: calc(9% + 0.1rem);
-  right: calc(4% + 5rem);
+  right: calc(4% + 5.85rem);
 }
 
 .hero-inner {
