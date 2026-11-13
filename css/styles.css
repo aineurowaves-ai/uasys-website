@@ -437,6 +437,113 @@ html[lang="de"] .lang [data-set-lang="de"] {
   mix-blend-mode: screen;
 }
 
+/* CSS frame: corners stay crisp (no stretched SVG strokes → black wedges) */
+.hero-frame {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.hero-frame-corner {
+  position: absolute;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-color: rgba(255, 196, 100, 0.42);
+  border-style: solid;
+  border-width: 0;
+}
+
+.hero-frame-corner-tl {
+  top: 9%;
+  left: 4%;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+}
+
+.hero-frame-corner-tr {
+  top: 9%;
+  right: 4%;
+  border-top-width: 1.5px;
+  border-right-width: 1.5px;
+}
+
+.hero-frame-corner-bl {
+  bottom: 9%;
+  left: 4%;
+  border-bottom-width: 1.5px;
+  border-left-width: 1.5px;
+}
+
+.hero-frame-corner-br {
+  bottom: 9%;
+  right: 4%;
+  border-bottom-width: 1.5px;
+  border-right-width: 1.5px;
+}
+
+.hero-frame-rail {
+  position: absolute;
+  height: 1px;
+  width: min(22vw, 17.5rem);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(106, 160, 255, 0.32) 0 2px,
+    transparent 2px 12px
+  );
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+  animation: hero-rail-dash 22s linear infinite;
+}
+
+.hero-frame-rail-tl {
+  top: calc(9% + 0.35rem);
+  left: calc(4% + 5.2rem);
+}
+
+.hero-frame-rail-tr {
+  top: calc(9% + 0.35rem);
+  right: calc(4% + 5.2rem);
+}
+
+.hero-frame-rail-bl {
+  bottom: calc(9% + 0.35rem);
+  left: calc(4% + 5.2rem);
+}
+
+.hero-frame-rail-br {
+  bottom: calc(9% + 0.35rem);
+  right: calc(4% + 5.2rem);
+}
+
+.hero-frame-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(106, 160, 255, 0.75);
+}
+
+.hero-frame-dot-tl {
+  top: calc(9% + 0.1rem);
+  left: calc(4% + 5rem);
+}
+
+.hero-frame-dot-tr {
+  top: calc(9% + 0.1rem);
+  right: calc(4% + 5rem);
+}
+
+.hero-frame-dot-bl {
+  bottom: calc(9% + 0.1rem);
+  left: calc(4% + 5rem);
+}
+
+.hero-frame-dot-br {
+  bottom: calc(9% + 0.1rem);
+  right: calc(4% + 5rem);
+}
+
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -1259,6 +1366,12 @@ html[lang="de"] .lang [data-set-lang="de"] {
   }
 }
 
+@keyframes hero-rail-dash {
+  to {
+    background-position: -280px 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1274,6 +1387,7 @@ html[lang="de"] .lang [data-set-lang="de"] {
   .hero-wash,
   .hero-scan,
   .hero-mark-glow,
+  .hero-frame-rail,
   .system-svg path,
   .service-viz path.trace {
     animation: none !important;
@@ -1335,6 +1449,20 @@ html[lang="de"] .lang [data-set-lang="de"] {
 
   .hero-scan {
     display: none;
+  }
+
+  .hero-frame {
+    opacity: 0.36;
+  }
+
+  .hero-frame-rail {
+    animation: none;
+    opacity: 0.7;
+  }
+
+  .hero-frame-corner {
+    width: 3.25rem;
+    height: 3.25rem;
   }
 
   .hero-inner {
@@ -1422,6 +1550,14 @@ html[lang="de"] .lang [data-set-lang="de"] {
     width: 11rem;
     height: 11rem;
     opacity: 0.7;
+  }
+
+  .hero-frame {
+    opacity: 0.28;
+  }
+
+  .hero-frame-rail {
+    width: min(28vw, 7.5rem);
   }
 
   .hero-mark-wrap {
