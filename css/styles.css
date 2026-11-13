@@ -412,10 +412,9 @@ html[lang="de"] .lang [data-set-lang="de"] {
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.34;
+  opacity: 0.38;
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(ellipse 58% 52% at 50% 42%, transparent 0%, transparent 42%, #000 78%);
-  mask-image: radial-gradient(ellipse 58% 52% at 50% 42%, transparent 0%, transparent 42%, #000 78%);
+  overflow: visible;
 }
 
 .circuit-lines path {
@@ -429,6 +428,13 @@ html[lang="de"] .lang [data-set-lang="de"] {
 .circuit-lines circle {
   fill: #4b8bff;
 }
+
+.circuit-shift-tl { transform: translate(-120px, -80px); }
+.circuit-shift-tr { transform: translate(120px, -60px); }
+.circuit-shift-bl { transform: translate(-140px, 70px); }
+.circuit-shift-br { transform: translate(140px, 60px); }
+.circuit-shift-ml { transform: translate(-160px, 0); }
+.circuit-shift-mr { transform: translate(160px, 10px); }
 
 .hero-inner {
   position: relative;
@@ -1308,15 +1314,19 @@ html[lang="de"] .lang [data-set-lang="de"] {
   }
 
   .circuit-lines {
-    opacity: 0.22;
-    -webkit-mask-image: radial-gradient(ellipse 78% 72% at 50% 40%, transparent 0%, transparent 55%, #000 88%);
-    mask-image: radial-gradient(ellipse 78% 72% at 50% 40%, transparent 0%, transparent 55%, #000 88%);
+    opacity: 0.3;
   }
 
   .circuit-lines path {
     animation: none;
-    stroke-dasharray: 5 9;
   }
+
+  .circuit-shift-tl { transform: translate(-200px, -130px); }
+  .circuit-shift-tr { transform: translate(200px, -110px); }
+  .circuit-shift-bl { transform: translate(-220px, 130px); }
+  .circuit-shift-br { transform: translate(220px, 120px); }
+  .circuit-shift-ml { transform: translate(-250px, 20px); }
+  .circuit-shift-mr { transform: translate(250px, 30px); }
 
   .hero-inner {
     gap: 1.15rem;

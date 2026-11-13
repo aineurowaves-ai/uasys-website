@@ -125,19 +125,31 @@
         <div class="hero-bg" aria-hidden="true">
           <div class="ember ember-a"></div>
           <div class="ember ember-b"></div>
-          <svg class="circuit-lines" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-            <path d="M0 110 H150 L190 150 H250" />
-            <path d="M1200 130 H1050 L1010 170 H950" />
-            <path d="M0 690 H140 L180 650 H250" />
-            <path d="M1200 720 H1060 L1020 680 H950" />
-            <path d="M0 380 H110 L145 345 H200" />
-            <path d="M1200 430 H1090 L1055 465 H1000" />
-            <circle cx="250" cy="150" r="3.5" />
-            <circle cx="950" cy="170" r="3.5" />
-            <circle cx="250" cy="650" r="3.5" />
-            <circle cx="950" cy="680" r="3.5" />
-            <circle cx="200" cy="345" r="3.5" />
-            <circle cx="1000" cy="465" r="3.5" />
+          <svg class="circuit-lines" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <g class="circuit-shift-tl">
+              <path d="M0 180 H220 L280 240 H420" />
+              <circle cx="420" cy="240" r="4" />
+            </g>
+            <g class="circuit-shift-tr">
+              <path d="M1200 260 H980 L920 320 H760" />
+              <circle cx="760" cy="320" r="4" />
+            </g>
+            <g class="circuit-shift-bl">
+              <path d="M0 620 H160 L210 560 H390 L440 620 H640" />
+              <circle cx="440" cy="620" r="4" />
+            </g>
+            <g class="circuit-shift-br">
+              <path d="M1200 700 H900 L850 640 H700" />
+              <circle cx="700" cy="640" r="4" />
+            </g>
+            <g class="circuit-shift-ml">
+              <path d="M80 420 H260 L310 370 H480" />
+              <circle cx="480" cy="370" r="4" />
+            </g>
+            <g class="circuit-shift-mr">
+              <path d="M1120 480 H940 L890 530 H720" />
+              <circle cx="720" cy="530" r="4" />
+            </g>
           </svg>
         </div>
 
