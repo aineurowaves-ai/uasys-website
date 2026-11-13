@@ -413,8 +413,6 @@ html[lang="de"] .lang [data-set-lang="de"] {
   width: 100%;
   height: 100%;
   opacity: 0.38;
-  pointer-events: none;
-  overflow: visible;
 }
 
 .circuit-lines path {
@@ -428,13 +426,6 @@ html[lang="de"] .lang [data-set-lang="de"] {
 .circuit-lines circle {
   fill: #4b8bff;
 }
-
-.circuit-shift-tl { transform: translate(-120px, -80px); }
-.circuit-shift-tr { transform: translate(120px, -60px); }
-.circuit-shift-bl { transform: translate(-140px, 70px); }
-.circuit-shift-br { transform: translate(140px, 60px); }
-.circuit-shift-ml { transform: translate(-160px, 0); }
-.circuit-shift-mr { transform: translate(160px, 10px); }
 
 .hero-inner {
   position: relative;
@@ -1314,19 +1305,13 @@ html[lang="de"] .lang [data-set-lang="de"] {
   }
 
   .circuit-lines {
-    opacity: 0.3;
+    opacity: 0.18;
   }
 
   .circuit-lines path {
     animation: none;
+    stroke-dasharray: none;
   }
-
-  .circuit-shift-tl { transform: translate(-200px, -130px); }
-  .circuit-shift-tr { transform: translate(200px, -110px); }
-  .circuit-shift-bl { transform: translate(-220px, 130px); }
-  .circuit-shift-br { transform: translate(220px, 120px); }
-  .circuit-shift-ml { transform: translate(-250px, 20px); }
-  .circuit-shift-mr { transform: translate(250px, 30px); }
 
   .hero-inner {
     gap: 1.15rem;
