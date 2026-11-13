@@ -84,13 +84,36 @@
 
   const readLang = () => (document.documentElement.lang === "de" ? "de" : "en");
 
+  const cleanPath = (pathname) => {
+    let path = pathname || "/";
+    path = path.replace(/\/index\.html$/i, "/");
+    path = path.replace(/\.html$/i, "/");
+    if (path.length > 1 && !path.endsWith("/")) {
+      const last = path.split("/").pop() || "";
+      if (last && !last.includes(".")) path += "/";
+    }
+    return path || "/";
+  };
+
   const withLang = (href, lang) => {
     if (/^(https?:|mailto:|tel:)/.test(href)) return href;
     const url = new URL(href, location.href);
     if (url.origin !== location.origin) return href;
+    url.pathname = cleanPath(url.pathname);
     if (lang === "de") url.searchParams.set("lang", "de");
     else url.searchParams.delete("lang");
     return url.pathname + url.search + url.hash;
+  };
+
+  const syncCleanUrl = (lang) => {
+    const url = new URL(location.href);
+    url.pathname = cleanPath(url.pathname);
+    if (lang === "de") url.searchParams.set("lang", "de");
+    else url.searchParams.delete("lang");
+    const next = url.pathname + url.search + url.hash;
+    if (next !== location.pathname + location.search + location.hash) {
+      history.replaceState(null, "", next);
+    }
   };
 
   const applyLang = (lang) => {
@@ -101,10 +124,7 @@
     } catch {
       /* ignore */
     }
-    const url = new URL(location.href);
-    if (next === "de") url.searchParams.set("lang", "de");
-    else url.searchParams.delete("lang");
-    history.replaceState(null, "", url.pathname + url.search + url.hash);
+    syncCleanUrl(next);
 
     const copy = meta[next][page] || meta[next].index;
     document.title = copy.title;
