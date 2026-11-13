@@ -412,7 +412,10 @@ html[lang="de"] .lang [data-set-lang="de"] {
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.38;
+  opacity: 0.34;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 58% 52% at 50% 42%, transparent 0%, transparent 42%, #000 78%);
+  mask-image: radial-gradient(ellipse 58% 52% at 50% 42%, transparent 0%, transparent 42%, #000 78%);
 }
 
 .circuit-lines path {
@@ -1305,12 +1308,14 @@ html[lang="de"] .lang [data-set-lang="de"] {
   }
 
   .circuit-lines {
-    opacity: 0.18;
+    opacity: 0.22;
+    -webkit-mask-image: radial-gradient(ellipse 78% 72% at 50% 40%, transparent 0%, transparent 55%, #000 88%);
+    mask-image: radial-gradient(ellipse 78% 72% at 50% 40%, transparent 0%, transparent 55%, #000 88%);
   }
 
   .circuit-lines path {
     animation: none;
-    stroke-dasharray: none;
+    stroke-dasharray: 5 9;
   }
 
   .hero-inner {
